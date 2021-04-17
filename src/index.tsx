@@ -1,8 +1,10 @@
 import { render } from 'react-dom'
 import 'tailwindcss/tailwind.css'
 
+import { Router } from '@/config'
+
 function App() {
-  return <h1>App</h1>
+  return <Router />
 }
 
 render(<App />, document.querySelector('#app'))
