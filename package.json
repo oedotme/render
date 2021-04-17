@@ -13,5 +13,13 @@
     "frontend",
     "graphql",
     "react"
-  ]
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.1.5"
+  }
 }
