@@ -19,7 +19,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "format": "prettier --write 'src/**/*.{css,html,json,md,mdx,js,jsx,ts,tsx}'",
-    "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'"
+    "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -39,6 +40,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.1.1",
