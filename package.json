@@ -18,6 +18,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
+    "compile": "tsc",
     "format": "prettier --write 'src/**/*.{css,html,json,md,mdx,js,jsx,ts,tsx}'",
     "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "prepare": "husky install"
