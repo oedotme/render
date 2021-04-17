@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import { Guest, Private } from '@/layout'
 import { Dashboard, Home } from '@/pages'
 
 type Routes = Array<{
   path: string
   page: () => JSX.Element
-  layout?: () => JSX.Element
+  layout?: ({ children }: { children: JSX.Element }) => JSX.Element
   exact?: boolean
 }>
 
@@ -20,17 +21,21 @@ export default function Router(): JSX.Element {
     <BrowserRouter>
       {authed ? (
         <Switch>
-          {privateRoutes.map(({ path, page: Page, exact = true }) => (
+          {privateRoutes.map(({ path, page: Page, layout: Layout = Private, exact = true }) => (
             <Route key={path} path={path} exact={exact}>
-              <Page />
+              <Layout>
+                <Page />
+              </Layout>
             </Route>
           ))}
         </Switch>
       ) : (
         <Switch>
-          {guestRoutes.map(({ path, page: Page, exact = true }) => (
+          {guestRoutes.map(({ path, page: Page, layout: Layout = Guest, exact = true }) => (
             <Route key={path} path={path} exact={exact}>
-              <Page />
+              <Layout>
+                <Page />
+              </Layout>
             </Route>
           ))}
         </Switch>
