@@ -3,10 +3,17 @@
 #### technologies
 
 - react
+- react-dom
+- react-router-dom
 - tailwindcss
 - typescript
 
 #### tools
 
-- vite
+- commitlint
+- eslint
+- husky
+- lint-staged
 - postcss
+- prettier
+- vite
