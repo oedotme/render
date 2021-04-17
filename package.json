@@ -1,0 +1,17 @@
+{
+  "name": "render",
+  "version": "1.0.0",
+  "description": "A React app boilerplate",
+  "author": "oedotme",
+  "license": "ISC",
+  "keywords": [
+    "app",
+    "boilerplate",
+    "context",
+    "client",
+    "example",
+    "frontend",
+    "graphql",
+    "react"
+  ]
+}
