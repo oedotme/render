@@ -7,12 +7,15 @@
   "keywords": [
     "app",
     "boilerplate",
-    "context",
     "client",
-    "example",
+    "context",
     "frontend",
     "graphql",
-    "react"
+    "hooks",
+    "react",
+    "react-router",
+    "structure",
+    "web"
   ],
   "scripts": {
     "dev": "vite",
