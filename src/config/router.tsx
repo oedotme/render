@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { Guest, Private } from '@/layouts'
+import { Authed, Public } from '@/layouts'
 import { Dashboard, Home } from '@/pages'
 
 type Routes = Array<{
