@@ -4,42 +4,34 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Authed, Public } from '@/layouts'
 import { Dashboard, Home } from '@/pages'
 
-type Routes = Array<{
-  path: string
-  page: () => JSX.Element
-  layout?: ({ children }: { children: JSX.Element }) => JSX.Element
-  exact?: boolean
-}>
+type Routes = {
+  [key: string]: Array<{
+    path: string
+    page: () => JSX.Element
+    layout: ({ children }: { children: JSX.Element }) => JSX.Element
+    exact?: boolean
+  }>
+}
 
-const guestRoutes: Routes = [{ path: '/', page: Home }]
-const privateRoutes: Routes = [{ path: '/', page: Dashboard }]
+const routes: Routes = {
+  authed: [{ path: '/', page: Dashboard, layout: Authed }],
+  public: [{ path: '/', page: Home, layout: Public }],
+}
 
 export default function Router(): JSX.Element {
-  const [authed] = useState(false)
+  const [state] = useState<'authed' | 'public'>('public')
 
   return (
     <BrowserRouter>
-      {authed ? (
-        <Switch>
-          {privateRoutes.map(({ path, page: Page, layout: Layout = Private, exact = true }) => (
-            <Route key={path} path={path} exact={exact}>
-              <Layout>
-                <Page />
-              </Layout>
-            </Route>
-          ))}
-        </Switch>
-      ) : (
-        <Switch>
-          {guestRoutes.map(({ path, page: Page, layout: Layout = Guest, exact = true }) => (
-            <Route key={path} path={path} exact={exact}>
-              <Layout>
-                <Page />
-              </Layout>
-            </Route>
-          ))}
-        </Switch>
-      )}
+      <Switch>
+        {routes[state].map(({ path, page: Page, layout: Layout, exact = true }) => (
+          <Route key={path} path={path} exact={exact}>
+            <Layout>
+              <Page />
+            </Layout>
+          </Route>
+        ))}
+      </Switch>
     </BrowserRouter>
   )
 }
