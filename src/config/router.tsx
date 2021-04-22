@@ -5,7 +5,7 @@ import { Authed, Public } from '@/layouts'
 import { Dashboard, Home } from '@/pages'
 
 type Routes = {
-  [key: string]: Array<{
+  [key in 'authed' | 'public']: Array<{
     path: string
     page: () => JSX.Element
     layout: ({ children }: { children: JSX.Element }) => JSX.Element
@@ -19,7 +19,7 @@ const routes: Routes = {
 }
 
 export default function Router(): JSX.Element {
-  const [state] = useState<'authed' | 'public'>('public')
+  const [state] = useState<keyof typeof routes>('public')
 
   return (
     <BrowserRouter>
