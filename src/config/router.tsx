@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { Authed, Public } from '@/layouts'
@@ -8,7 +8,7 @@ type Routes = {
   [key in 'authed' | 'public']: Array<{
     path: string
     page: () => JSX.Element
-    layout: ({ children }: { children: JSX.Element }) => JSX.Element
+    layout?: ({ children }: { children: JSX.Element }) => JSX.Element
     exact?: boolean
   }>
 }
@@ -24,7 +24,7 @@ export default function Router(): JSX.Element {
   return (
     <BrowserRouter>
       <Switch>
-        {routes[state].map(({ path, page: Page, layout: Layout, exact = true }) => (
+        {routes[state].map(({ path, page: Page, layout: Layout = Fragment, exact = true }) => (
           <Route key={path} path={path} exact={exact}>
             <Layout>
               <Page />
