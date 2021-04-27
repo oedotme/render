@@ -35,7 +35,7 @@
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@tailwindcss/jit": "^0.1.18",
-    "@types/react": "^17.0.3",
+    "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -50,11 +50,11 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "postcss": "^8.2.12",
+    "postcss": "^8.2.13",
     "prettier": "^2.2.1",
     "prettier-plugin-tailwind": "^2.2.10",
     "tailwindcss": "^2.1.2",
     "typescript": "^4.2.4",
-    "vite": "^2.2.2"
+    "vite": "^2.2.3"
   }
 }
