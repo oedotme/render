@@ -8,20 +8,14 @@
   <i>Opinionated React Template</i>
 </p>
 
-#### technologies
+#### Tools
 
-- react
-- react-dom
-- react-router-dom
-- tailwindcss
-- typescript
-
-#### tools
-
-- commitlint
-- eslint
-- husky
-- lint-staged
-- postcss
-- prettier
-- vite
+- [React](https://reactjs.org)
+- [React Router](https://reactrouter.com/web)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vitejs.dev)
+- [ESLint](https://eslint.org)
+- [Prettier](https://prettier.io)
+- [Commit Lint](https://commitlint.js.org)
+- [Husky](https://typicode.github.io/husky)
