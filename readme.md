@@ -22,6 +22,17 @@
 - [Commit Lint](https://commitlint.js.org)
 - [Husky](https://typicode.github.io/husky)
 
+## Getting started
+
+#### Using this template
+
+- [Generate](https://github.com/oedotme/render/generate)
+
+#### Clone locally
+
+- `git clone git@github.com:oedotme/render.git`
+- or `git clone https://github.com/oedotme/render.git`
+
 ## Usage commands
 
 - `npm install` : install dependencies
