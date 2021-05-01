@@ -28,10 +28,10 @@
 
 - [Generate](https://github.com/oedotme/render/generate)
 
-#### Clone locally
+#### Clone locally using one of the following commands
 
 - `git clone git@github.com:oedotme/render.git`
-- or `git clone https://github.com/oedotme/render.git`
+- `git clone https://github.com/oedotme/render.git`
 
 ## Usage commands
 
