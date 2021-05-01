@@ -1,11 +1,11 @@
 import { Fragment, useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { Authed, Public } from '@/layouts'
+import { Private, Public } from '@/layouts'
 import { Dashboard, Home } from '@/pages'
 
 type Routes = {
-  [key in 'authed' | 'public']: Array<{
+  [key in 'private' | 'public']: Array<{
     path: string
     page: () => JSX.Element
     layout?: ({ children }: { children: JSX.Element }) => JSX.Element
@@ -14,7 +14,7 @@ type Routes = {
 }
 
 const routes: Routes = {
-  authed: [{ path: '/', page: Dashboard, layout: Authed }],
+  private: [{ path: '/', page: Dashboard, layout: Private }],
   public: [{ path: '/', page: Home, layout: Public }],
 }
 
