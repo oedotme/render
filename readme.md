@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://rendertemplate.vercel.app">Render</a>
+  <a href="https://rendertemplate.vercel.app" target="_blank" rel="noopener noreferrer">Render</a>
   <span> · </span>
   <i>Opinionated React Template</i>
 </p>
