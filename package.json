@@ -1,9 +1,9 @@
 {
   "name": "render",
   "version": "1.0.0",
-  "description": "React boilerplate",
-  "author": "oedotme",
-  "license": "ISC",
+  "description": "Opinionated React template",
+  "author": "Omar Elhawary <oedotme@gmail.com>",
+  "license": "MIT",
   "keywords": [
     "app",
     "boilerplate",
@@ -15,6 +15,7 @@
     "react",
     "react-router",
     "structure",
+    "template",
     "web"
   ],
   "scripts": {
