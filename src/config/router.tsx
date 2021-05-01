@@ -1,6 +1,7 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import { useAuth } from '@/context'
 import { Private, Public } from '@/layouts'
 import { Dashboard, Home } from '@/pages'
 
@@ -19,12 +20,14 @@ const routes: Routes = {
 }
 
 export default function Router(): JSX.Element {
-  const [state] = useState<keyof typeof routes>('public')
+  const auth = useAuth()
+
+  const status = auth.token ? 'private' : 'public'
 
   return (
     <BrowserRouter>
       <Switch>
-        {routes[state].map(({ path, page: Page, layout: Layout = Fragment, exact = true }) => (
+        {routes[status].map(({ path, page: Page, layout: Layout = Fragment, exact = true }) => (
           <Route key={path} path={path} exact={exact}>
             <Layout>
               <Page />
