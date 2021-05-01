@@ -8,7 +8,9 @@
   <i>Opinionated React Template</i>
 </p>
 
-#### Tools
+<br>
+
+## Tools used
 
 - [React](https://reactjs.org)
 - [React Router](https://reactrouter.com/web)
@@ -19,3 +21,10 @@
 - [Prettier](https://prettier.io)
 - [Commit Lint](https://commitlint.js.org)
 - [Husky](https://typicode.github.io/husky)
+
+## Usage commands
+
+- `npm install` : install dependencies
+- `npm run dev` : start development server _(http://localhost:3000)_
+- `npm run build` : build for production
+- `npm run serve` : serve production build _(http://localhost:5000)_
