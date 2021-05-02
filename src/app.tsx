@@ -1,15 +1,12 @@
-import { render } from 'react-dom'
 import 'tailwindcss/tailwind.css'
 
 import { Router } from '@/config'
 import { AuthProvider } from '@/context'
 
-function App() {
+export function App(): JSX.Element {
   return (
     <AuthProvider>
       <Router />
     </AuthProvider>
   )
 }
-
-render(<App />, document.querySelector('#app'))
