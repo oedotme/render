@@ -1,41 +1,52 @@
+<br>
 <p align="center">
-  <img src="./src/assets/icons/logo.svg" alt="Render - Opinionated React Template" width="100"/>
+  <a href="https://rendertemplate.vercel.app" target="_blank" rel="noopener noreferrer">
+    <img src="./src/assets/icons/logo.svg" alt="Render - Opinionated React Template" width="120"/>
+  </a>
 </p>
-
-<p align="center">
-  <a href="https://rendertemplate.vercel.app" target="_blank" rel="noopener noreferrer">Render</a>
-  <span> · </span>
-  <i>Opinionated React Template</i>
-</p>
-
+<p align="center"><em>Opinionated React Template</em></p>
 <br>
 
-## Tools used
+# Render
 
-- [React](https://reactjs.org)
-- [React Router](https://reactrouter.com/web)
-- [Tailwind CSS](https://tailwindcss.com)
-- [TypeScript](https://www.typescriptlang.org)
-- [Vite](https://vitejs.dev)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Commit Lint](https://commitlint.js.org)
-- [Husky](https://typicode.github.io/husky)
+Opinionated React template setup with modern tooling, [here some recommendations](#recommendations) if needed.
 
-## Getting started
+## Stack
 
-#### Using this template
+- Framework - [React](https://reactjs.org)
+- Routing - [React Router](https://reactrouter.com/web)
+- Styling - [Tailwind CSS](https://tailwindcss.com)
+- Type checking - [TypeScript](https://www.typescriptlang.org)
+- Building tool - [Vite](https://vitejs.dev)
+- Linting - [ESLint](https://eslint.org)
+- Formatting - [Prettier](https://prettier.io)
+- Git hooks - [Husky](https://typicode.github.io/husky)
 
-- [Generate](https://github.com/oedotme/render/generate)
+## Usage
 
-#### Clone locally using one of the following commands
+By [generating](https://github.com/oedotme/render/generate) from this template then/or cloning locally
 
-- `git clone git@github.com:oedotme/render.git`
-- `git clone https://github.com/oedotme/render.git`
+## Commands
 
-## Usage commands
+```shell
+# install dependencies
+npm install
 
-- `npm install` : install dependencies
-- `npm run dev` : start development server _(http://localhost:3000)_
-- `npm run build` : build for production
-- `npm run serve` : serve production build _(http://localhost:5000)_
+# start development server · http://localhost:3000
+npm run dev
+
+# build for production
+npm run build
+
+# serve production build · http://localhost:5000
+npm run serve
+```
+
+## Recommendations
+
+- Server state - [React Query](https://react-query.tanstack.com)
+- Data fetching - [Axios](https://github.com/axios/axios), [Redaxios](https://github.com/developit/redaxios)
+
+## License
+
+MIT
