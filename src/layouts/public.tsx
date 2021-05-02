@@ -4,7 +4,7 @@ type Props = {
   children: JSX.Element
 }
 
-export default function Guest({ children }: Props): JSX.Element {
+export default function Public({ children }: Props): JSX.Element {
   return (
     <div className="flex flex-col p-6 min-h-screen">
       <Header />
