@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import { useAuth } from '@/context'
 import { Private, Public } from '@/layouts'
@@ -33,16 +33,14 @@ export default function Router(): JSX.Element {
   const status = auth.token ? 'private' : 'public'
 
   return (
-    <BrowserRouter>
-      <Switch>
-        {routes[status].map(({ path, page: Page, layout: Layout = Fragment, exact = true }) => (
-          <Route key={path} path={path} exact={exact}>
-            <Layout>
-              <Page />
-            </Layout>
-          </Route>
-        ))}
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      {routes[status].map(({ path, page: Page, layout: Layout = Fragment, exact = true }) => (
+        <Route key={path} path={path} exact={exact}>
+          <Layout>
+            <Page />
+          </Layout>
+        </Route>
+      ))}
+    </Switch>
   )
 }
