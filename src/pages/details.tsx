@@ -1,6 +1,6 @@
 import { useAuth } from '@/context'
 
-export default function Dashboard(): JSX.Element {
+export default function Details(): JSX.Element {
   const auth = useAuth()
 
   const logout = () => auth.logout()
