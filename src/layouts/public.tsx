@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom'
-
-import { Logo } from '@/assets'
+import { Header } from '@/components'
 
 type Props = {
   children: JSX.Element
@@ -8,21 +6,9 @@ type Props = {
 
 export default function Guest({ children }: Props): JSX.Element {
   return (
-    <>
-      <header className="p-6">
-        <ul>
-          <li>
-            <Link to="/">
-              <img src={Logo} alt="Render" />
-            </Link>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-      </header>
-
-      <main className="p-6">{children}</main>
-    </>
+    <div className="flex flex-col p-6 min-h-screen">
+      <Header />
+      <main className="flex flex-1 flex-col items-center justify-center">{children}</main>
+    </div>
   )
 }
