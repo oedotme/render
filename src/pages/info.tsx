@@ -8,16 +8,16 @@ export default function Info(): JSX.Element {
   const [email, setEmail] = useState('')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)
-  const login = () => auth.login('user@mail.com')
+  const login = () => auth.login(email)
 
   return (
     <>
-      <h1 className="text-2xl">This is the home page</h1>
+      <h1 className="font-mono text-2xl">/routes</h1>
 
-      <div className="mt-3">
-        <input className="p-2 border" type="email" placeholder="email" value={email} onChange={handleChange} />
+      <div className="flex flex-col m-6">
+        <input className="p-3 border rounded" type="email" placeholder="Email" value={email} onChange={handleChange} />
         <button
-          className="mx-3 p-2 px-4 disabled:text-gray-600 text-white bg-black disabled:bg-gray-200 border border-black disabled:border-gray-200 disabled:cursor-not-allowed"
+          className="bg-[#1c2954] mt-3 px-4 py-3 disabled:text-gray-600 text-white disabled:bg-gray-200 border border-black disabled:border-gray-200 rounded disabled:cursor-not-allowed"
           onClick={login}
           disabled={!email}
         >
