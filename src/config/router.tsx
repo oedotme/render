@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { useAuth } from '@/context'
 import { Private, Public } from '@/layouts'
-import { Dashboard, Home } from '@/pages'
+import { Details, Home, Info } from '@/pages'
 
 type Routes = {
   [key in 'private' | 'public']: Array<{
@@ -15,8 +15,14 @@ type Routes = {
 }
 
 const routes: Routes = {
-  private: [{ path: '/', page: Dashboard, layout: Private }],
-  public: [{ path: '/', page: Home, layout: Public }],
+  private: [
+    { path: '/', page: Home, layout: Private },
+    { path: '/details', page: Details, layout: Private },
+  ],
+  public: [
+    { path: '/', page: Home, layout: Public },
+    { path: '/info', page: Info, layout: Public },
+  ],
 }
 
 export default function Router(): JSX.Element {
