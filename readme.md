@@ -9,7 +9,7 @@
 
 # Render
 
-Opinionated React template setup with modern tooling, [here some recommendations](#recommendations) if needed.
+Opinionated React template setup with modern tooling, here some [recommendations](#recommendations) if needed
 
 ## Stack
 
