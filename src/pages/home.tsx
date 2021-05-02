@@ -9,7 +9,7 @@ export default function Home(): JSX.Element {
       <ul className="mt-8">
         <li>
           <a href="https://github.com/oedotme/render" target="_blank" rel="noopener noreferrer">
-            <img className="w-6 opacity-50 hover:opacity-80" src={GitHub} alt="GitHub" />
+            <img className="w-6 h-6 opacity-50 hover:opacity-80" src={GitHub} alt="GitHub" />
           </a>
         </li>
       </ul>
