@@ -7,11 +7,11 @@ export default function Details(): JSX.Element {
 
   return (
     <>
-      <h1 className="text-2xl">This is the dashboard page</h1>
+      <h1 className="font-mono text-2xl">/routes</h1>
 
-      <div className="mt-3">
-        <span>{auth.user?.email}</span>
-        <button className="mx-3 p-2 px-4 text-white bg-black disabled:bg-gray-200 border border-black" onClick={logout}>
+      <div className="m-6">
+        <p className="p-3 text-center font-mono border border-white">{auth.user?.email}</p>
+        <button className="bg-[#1c2954] mt-3 p-3 px-4 text-white border border-black rounded" onClick={logout}>
           Switch to public routes
         </button>
       </div>
