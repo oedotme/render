@@ -17,11 +17,13 @@ type Routes = {
 const routes: Routes = {
   private: [
     { path: '/', page: Home, layout: Private },
-    { path: '/details', page: Details, layout: Private },
+    { path: '/routes', page: Details, layout: Private },
+    { path: '*', page: Home, layout: Private },
   ],
   public: [
     { path: '/', page: Home, layout: Public },
-    { path: '/info', page: Info, layout: Public },
+    { path: '/routes', page: Info, layout: Public },
+    { path: '*', page: Home, layout: Public },
   ],
 }
 
