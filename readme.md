@@ -22,6 +22,22 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - Formatting - [Prettier](https://prettier.io)
 - Git hooks - [Husky](https://typicode.github.io/husky)
 
+## Features
+
+- Authentication
+  - Context `AuthProvider`
+  - Hook `useAuth`
+- File based routing
+  - Vite powered
+  - Extensions `.tsx`
+  - Index routes `src/pages/index.tsx` to `/`
+  - Nested routes `src/pages/routing/index.tsx` to `/routing`
+  - Dynamic routes `src/pages/routing/[dynamic].tsx` to `/routing/:dynamic`
+  - Page Layouts
+- Pre-rendering
+  - Script `npm run export`
+  - Static HTML generated at `dist/static`
+
 ## Usage
 
 By [generating](https://github.com/oedotme/render/generate) from this template then/or cloning locally
