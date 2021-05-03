@@ -1,14 +1,16 @@
-import { Header } from '@/components'
+import { Redirect } from 'react-router'
+
+import { useAuth } from '@/context'
+import { Shared } from '@/layouts'
 
 type Props = {
   children: JSX.Element
 }
 
 export default function Private({ children }: Props): JSX.Element {
-  return (
-    <div className="flex flex-col p-6 min-h-screen">
-      <Header />
-      <main className="flex flex-1 flex-col items-center justify-center">{children}</main>
-    </div>
-  )
+  const auth = useAuth()
+
+  if (!auth.token) return <Redirect to="/login" />
+
+  return <Shared>{children}</Shared>
 }
