@@ -1,46 +1,45 @@
 import { Fragment } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
-import { useAuth } from '@/context'
-import { Private, Public } from '@/layouts'
-import { Details, Home, Info } from '@/pages'
+import { Private, Public, Shared } from '@/layouts'
 
-type Routes = {
-  [key in 'private' | 'public']: Array<{
-    path: string
-    page: () => JSX.Element
-    layout?: ({ children }: { children: JSX.Element }) => JSX.Element
-    exact?: boolean
-  }>
-}
+type Routes = Array<{
+  path: string
+  component: () => JSX.Element
+  layout: ({ children }: { children: JSX.Element }) => JSX.Element
+}>
 
-const routes: Routes = {
-  private: [
-    { path: '/', page: Home, layout: Private },
-    { path: '/routes', page: Details, layout: Private },
-    { path: '*', page: Home, layout: Private },
-  ],
-  public: [
-    { path: '/', page: Home, layout: Public },
-    { path: '/routes', page: Info, layout: Public },
-    { path: '*', page: Home, layout: Public },
-  ],
-}
+const files = import.meta.globEager(`../pages/**/*.tsx`)
+
+const layouts = { private: Private, public: Public, shared: Shared }
+
+const routes: Routes = Object.keys(files).map((file) => {
+  const path = file
+    .replace(/\.\.\/pages|index|\.tsx$/g, '')
+    .replace(/\[/g, ':')
+    .replace(/\]/g, '')
+
+  return {
+    path: path,
+    component: files[file].default as () => JSX.Element,
+    layout: layouts[(files[file].meta?.layout as keyof typeof layouts) || 'shared'],
+  }
+})
 
 export default function Router(): JSX.Element {
-  const auth = useAuth()
-
-  const status = auth.token ? 'private' : 'public'
-
   return (
     <Switch>
-      {routes[status].map(({ path, page: Page, layout: Layout = Fragment, exact = true }) => (
-        <Route key={path} path={path} exact={exact}>
+      {routes.map(({ path, component: Component = Fragment, layout: Layout = Fragment }) => (
+        <Route key={path} path={path} exact={true}>
           <Layout>
-            <Page />
+            <Component />
           </Layout>
         </Route>
       ))}
+
+      <Route path="*">
+        <Redirect to="/" />
+      </Route>
     </Switch>
   )
 }
