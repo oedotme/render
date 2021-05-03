@@ -3,7 +3,7 @@ import { GitHub, Logo } from '@/assets'
 export default function Home(): JSX.Element {
   return (
     <>
-      <img className="w-32" src={Logo} alt="Render · Opinionated React Template" />
+      <img className="w-32 h-32" src={Logo} alt="Render · Opinionated React Template" />
       <em className="mt-4 text-gray-700">Opinionated React Template</em>
 
       <ul className="mt-8">
