@@ -2,7 +2,9 @@ import { useState } from 'react'
 
 import { useAuth } from '@/context'
 
-export default function Info(): JSX.Element {
+export const meta = { layout: 'public' }
+
+export default function Login(): JSX.Element {
   const auth = useAuth()
 
   const [email, setEmail] = useState('')
@@ -12,16 +14,22 @@ export default function Info(): JSX.Element {
 
   return (
     <>
-      <h1 className="font-mono text-2xl">/routes</h1>
+      <h1 className="font-mono text-2xl">/auth</h1>
 
-      <div className="flex flex-col m-6">
-        <input className="p-3 border rounded" type="email" placeholder="Email" value={email} onChange={handleChange} />
+      <div className="flex flex-col m-6 w-56">
+        <input
+          className="p-3 text-center border rounded"
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={handleChange}
+        />
         <button
           className="bg-[#1c2954] mt-3 px-4 py-3 disabled:text-gray-600 text-white disabled:bg-gray-200 border border-black disabled:border-gray-200 rounded disabled:cursor-not-allowed"
           onClick={login}
           disabled={!email}
         >
-          Switch to private routes
+          Login
         </button>
       </div>
     </>
