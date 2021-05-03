@@ -5,12 +5,20 @@ import { render } from './dist/server/server.js'
 
 const template = fs.readFileSync(path.resolve('./dist/static/index.html'), 'utf-8')
 
-const pages = fs.readdirSync(path.resolve('./src/pages'))
+function lsfiles(dir) {
+  return fs.readdirSync(path.resolve(dir)).reduce((list, file) => {
+    const name = path.join(dir, file)
+    return list.concat(fs.statSync(name).isDirectory() ? lsfiles(name) : [name])
+  }, [])
+}
 
-const routes = pages.map((file) => {
-  const name = file.replace(/\.tsx$/, '')
-  return name === 'home' ? `/` : `/${name}`
-})
+const files = lsfiles('./src/pages').filter((page) => !/\[.+\]/g.test(page))
+
+const routes = files.map((file) => file.replace(/^src\/pages|index|\.tsx$/g, ''))
+
+const padding = Math.max(...routes.map((route) => route.length))
+
+console.log('\nprerender')
 
 for (const url of routes) {
   const context = {}
@@ -18,6 +26,11 @@ for (const url of routes) {
 
   const html = template.replace(`<!--app-->`, app)
 
-  const filePath = `./dist/static${url === '/' ? '/index' : url}.html`
-  fs.writeFileSync(path.resolve(filePath), html)
+  const dir = `./dist/static${url}`.replace(/\/$/, '')
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+
+  const file = `./dist/static${url.replace(/\/$/, '/index')}.html`
+  fs.writeFileSync(path.resolve(file), html)
+
+  console.log(`\x1b[32m${url}`.padEnd(padding), `\t\x1b[37m${file.replace('./', '')}`)
 }
