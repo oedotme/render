@@ -21,9 +21,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "export": "vite build --outDir dist/static && npm run server && node prerender.mjs",
     "server": "vite build --ssr src/server.tsx --outDir dist/server",
-    "static": "vite build --outDir dist/static && npm run server && node prerender.mjs",
-    "serve": "vite preview",
+    "preview": "vite preview",
     "compile": "tsc",
     "format": "prettier --write 'src/**/*.{css,html,json,md,mdx,js,jsx,ts,tsx}'",
     "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
