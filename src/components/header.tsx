@@ -14,14 +14,24 @@ export default function Header(): JSX.Element {
             <img className="w-8 h-8 bg-gray-50 rounded-sm" src={Logo} alt="Render" />
           </Link>
         </li>
+
+        {auth.token ? (
+          <li>
+            <Link className="p-2 hover:underline" to="/logout">
+              /auth
+            </Link>
+          </li>
+        ) : (
+          <li>
+            <Link className="p-2 hover:underline" to="/login">
+              /auth
+            </Link>
+          </li>
+        )}
+
         <li>
-          <Link className="p-2 hover:underline" to="/">
-            /
-          </Link>
-        </li>
-        <li>
-          <Link className="p-2 hover:underline" to="/routes">
-            /routes
+          <Link className="p-2 hover:underline" to="/routing">
+            /routing
           </Link>
         </li>
       </ul>
