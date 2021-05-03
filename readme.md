@@ -44,8 +44,27 @@ npm run serve
 
 ## Recommendations
 
-- Server state - [React Query](https://react-query.tanstack.com)
-- Data fetching - [Axios](https://github.com/axios/axios), [Redaxios](https://github.com/developit/redaxios)
+- Server state
+  - [React Query](https://react-query.tanstack.com)
+  - [SWR](https://swr.vercel.app)
+- Data fetching
+  - [Redaxios](https://github.com/developit/redaxios)
+  - [Axios](https://github.com/axios/axios)
+- Language
+  - [ReScript](https://rescript-lang.org)
+- Framework
+  - [Next.js](https://nextjs.org)
+  - [Blitz](https://blitzjs.com)
+  - [Redwood](https://redwoodjs.com)
+- Animation
+  - [Framer Motion](https://www.framer.com/motion)
+- Components
+  - [Headless UI](https://headlessui.dev)
+- Global state
+  - [Zustand](https://github.com/pmndrs/zustand)
+  - [Recoil](https://recoiljs.org)
+  - [Jotai](https://github.com/pmndrs/jotai)
+  - [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## License
 
