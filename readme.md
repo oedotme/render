@@ -71,6 +71,7 @@ npm run serve
 - [Next.js](https://nextjs.org)
 - [Blitz](https://blitzjs.com)
 - [Redwood](https://redwoodjs.com)
+- [Remix](https://remix.run)
 
 #### Language
 
@@ -79,6 +80,11 @@ npm run serve
 #### Components
 
 - [Headless UI](https://headlessui.dev)
+- [Chakra UI](https://chakra-ui.com)
+
+#### Build tools
+
+- [Snowpack](https://snowpack.dev)
 
 #### Server state
 
