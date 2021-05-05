@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import { Private, Public, Shared } from '@/layouts'
 
@@ -9,22 +9,26 @@ type Routes = Array<{
   layout: ({ children }: { children: JSX.Element }) => JSX.Element
 }>
 
-const files = import.meta.globEager(`../pages/**/*.tsx`)
-
 const layouts = { private: Private, public: Public, shared: Shared }
 
-const routes: Routes = Object.keys(files).map((file) => {
-  const path = file
-    .replace(/\.\.\/pages|index|\.tsx$/g, '')
-    .replace(/\[/g, ':')
-    .replace(/\]/g, '')
+const files = import.meta.globEager(`../pages/**/*.tsx`)
 
-  return {
-    path: path,
-    component: files[file].default as () => JSX.Element,
-    layout: layouts[(files[file].meta?.layout as keyof typeof layouts) || 'shared'],
-  }
-})
+const codes = { '/404': '*' }
+
+const routes: Routes = Object.keys(files)
+  .reverse()
+  .map((file) => {
+    const path = file
+      .replace(/\.\.\/pages|index|\.tsx$/g, '')
+      .replace(/\[/g, ':')
+      .replace(/\]/g, '')
+
+    return {
+      path: path in codes ? codes[path as keyof typeof codes] : path,
+      component: files[file].default as () => JSX.Element,
+      layout: layouts[(files[file].meta?.layout as keyof typeof layouts) || 'shared'],
+    }
+  })
 
 export default function Router(): JSX.Element {
   return (
@@ -36,10 +40,6 @@ export default function Router(): JSX.Element {
           </Layout>
         </Route>
       ))}
-
-      <Route path="*">
-        <Redirect to="/" />
-      </Route>
     </Switch>
   )
 }
