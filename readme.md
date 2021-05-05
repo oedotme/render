@@ -66,6 +66,20 @@ npm run serve
 
 ## Recommendations
 
+#### Framework
+
+- [Next.js](https://nextjs.org)
+- [Blitz](https://blitzjs.com)
+- [Redwood](https://redwoodjs.com)
+
+#### Language
+
+- [ReScript](https://rescript-lang.org)
+
+#### Components
+
+- [Headless UI](https://headlessui.dev)
+
 #### Server state
 
 - [React Query](https://react-query.tanstack.com)
@@ -76,30 +90,16 @@ npm run serve
 - [Redaxios](https://github.com/developit/redaxios)
 - [Axios](https://github.com/axios/axios)
 
-#### Language
+#### Global state
 
-- [ReScript](https://rescript-lang.org)
-
-#### Framework
-
-- [Next.js](https://nextjs.org)
-- [Blitz](https://blitzjs.com)
-- [Redwood](https://redwoodjs.com)
+- [Recoil](https://recoiljs.org)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Jotai](https://github.com/pmndrs/jotai)
+- [Redux Toolkit](https://redux-toolkit.js.org)
 
 #### Animation
 
 - [Framer Motion](https://www.framer.com/motion)
-
-#### Components
-
-- [Headless UI](https://headlessui.dev)
-
-#### Global state
-
-- [Zustand](https://github.com/pmndrs/zustand)
-- [Recoil](https://recoiljs.org)
-- [Jotai](https://github.com/pmndrs/jotai)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## License
 
