@@ -3,19 +3,13 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Private, Public, Shared } from '@/layouts'
 
-type Routes = Array<{
-  path: string
-  component: () => JSX.Element
-  layout: ({ children }: { children: JSX.Element }) => JSX.Element
-}>
-
 const layouts = { private: Private, public: Public, shared: Shared }
 
 const files = import.meta.globEager(`../pages/**/*.tsx`)
 
 const codes = { '/404': '*' }
 
-const routes: Routes = Object.keys(files)
+const routes = Object.keys(files)
   .reverse()
   .map((file) => {
     const path = file
