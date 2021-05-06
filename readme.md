@@ -66,14 +66,14 @@ npm run serve
 
 ## Recommendations
 
-#### Framework
+#### Frameworks
 
 - [Next.js](https://nextjs.org)
 - [Blitz](https://blitzjs.com)
 - [Redwood](https://redwoodjs.com)
 - [Remix](https://remix.run)
 
-#### Language
+#### Languages
 
 - [ReScript](https://rescript-lang.org)
 
