@@ -7,18 +7,15 @@ const layouts = { private: Private, public: Public, shared: Shared }
 
 const files = import.meta.globEager(`../pages/**/*.tsx`)
 
-const codes = { '/404': '*' }
+const paths = { '/404': '*' }
 
 const routes = Object.keys(files)
   .reverse()
   .map((file) => {
-    const path = file
-      .replace(/\.\.\/pages|index|\.tsx$/g, '')
-      .replace(/\[/g, ':')
-      .replace(/\]/g, '')
+    const path = file.replace(/\.\.\/pages|index|\]|\.tsx$/g, '').replace(/\[/g, ':')
 
     return {
-      path: path in codes ? codes[path as keyof typeof codes] : path,
+      path: path in paths ? paths[path as keyof typeof paths] : path,
       component: files[file].default as () => JSX.Element,
       layout: layouts[(files[file].meta?.layout as keyof typeof layouts) || 'shared'],
     }
