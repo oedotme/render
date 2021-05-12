@@ -1,3 +1,4 @@
 {
+  "github": { "autoJobCancelation": true, "silent": true },
   "routes": [{ "src": "/[^.]+", "dest": "/" }]
 }
