@@ -24,11 +24,6 @@ Opinionated React template setup with modern tooling, here some [recommendations
 
 ## Features
 
-#### Authentication
-
-- `AuthProvider` context
-- `useAuth` hook
-
 #### File based routing
 
 - Vite powered
@@ -38,6 +33,11 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - Dynamic routes `src/pages/routing/[dynamic].tsx` to `/routing/:dynamic`
 - No matching routes `src/pages/404.tsx`
 - Page Layouts
+
+#### Hooks
+
+- Authentication [`useAuth`](./src/context/auth.tsx)
+- API queries [`useQuery`](./src/hooks/query.ts)
 
 #### Pre-rendering
 
