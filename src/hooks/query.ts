@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 
 export type Query<T> = { loading: boolean; error: boolean; data?: T }
 
-const initialOptions = { enabled: true }
+const defaultOptions = { enabled: true }
 
-export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, options = initialOptions): Query<T> => {
+export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, options = defaultOptions): Query<T> => {
   const ref = useRef<() => Promise<T>>()
 
   const [loading, setLoading] = useState(true)
