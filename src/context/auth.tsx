@@ -13,7 +13,7 @@ type AuthContext = {
 
 const AuthContext = createContext<AuthContext | null>(null)
 
-export function AuthProvider({ children }: { children: React.ReactNode }): JSX.Element | null {
+export const AuthProvider = ({ children }: { children: React.ReactNode }): JSX.Element | null => {
   const [token, setToken] = useState<string>(() => storage.get('token') || '')
   const [user, setUser] = useState<AuthContext['user']>(() => storage.get('user') || undefined)
 
@@ -36,7 +36,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }): JSX.E
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
-export function useAuth(): AuthContext {
+export const useAuth = (): AuthContext => {
   const context = useContext(AuthContext)
   if (!context) throw Error('useAuth should be used within <AuthProvider />')
   return context

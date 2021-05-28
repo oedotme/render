@@ -21,7 +21,7 @@ const routes = Object.keys(files)
     }
   })
 
-export function Routes(): JSX.Element {
+export const Routes = (): JSX.Element => {
   return (
     <Switch>
       {routes.map(({ path, component: Component = Fragment, layout: Layout = Fragment }) => (
