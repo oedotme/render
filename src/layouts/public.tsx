@@ -7,7 +7,7 @@ type Props = {
   children: JSX.Element
 }
 
-export default function Public({ children }: Props): JSX.Element {
+export const Public = ({ children }: Props): JSX.Element => {
   const auth = useAuth()
 
   if (auth.token) return <Redirect to="/" />
