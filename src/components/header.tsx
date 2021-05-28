@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { useAuth } from '@/context'
 
-export default function Header(): JSX.Element {
+export const Header = (): JSX.Element => {
   const auth = useAuth()
 
   return (
