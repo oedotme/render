@@ -1,3 +1,1 @@
-export * from './private'
-export * from './public'
-export * from './shared'
+export * from './main'

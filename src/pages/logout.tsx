@@ -1,6 +1,6 @@
 import { useAuth } from '@/context'
 
-export const meta = { layout: 'private' }
+export const meta = { scope: 'private' }
 
 export default function Logout(): JSX.Element {
   const auth = useAuth()

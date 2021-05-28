@@ -1,9 +1,7 @@
 import { Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import { Private, Public, Shared } from '@/layouts'
-
-const layouts = { private: Private, public: Public, shared: Shared }
+import { Guard } from '@/components'
 
 const files = import.meta.globEager(`../pages/**/*.tsx`)
 
@@ -17,18 +15,18 @@ const routes = Object.keys(files)
     return {
       path: path in paths ? paths[path as keyof typeof paths] : path,
       component: files[file].default as () => JSX.Element,
-      layout: layouts[(files[file].meta?.layout as keyof typeof layouts) || 'shared'],
+      scope: files[file].meta?.scope as 'private' | 'public',
     }
   })
 
 export const Routes = (): JSX.Element => {
   return (
     <Switch>
-      {routes.map(({ path, component: Component = Fragment, layout: Layout = Fragment }) => (
+      {routes.map(({ path, component: Component = Fragment, scope }) => (
         <Route key={path} path={path} exact={true}>
-          <Layout>
+          <Guard scope={scope}>
             <Component />
-          </Layout>
+          </Guard>
         </Route>
       ))}
     </Switch>
