@@ -1,7 +1,7 @@
 <br>
 <p align="center">
   <a href="https://rendertemplate.vercel.app" target="_blank" rel="noopener noreferrer">
-    <img src="./src/assets/icons/logo.svg" alt="Render · Opinionated React Template" width="120"/>
+    <img src="./public/assets/icons/logo.svg" alt="Render · Opinionated React Template" width="120"/>
   </a>
 </p>
 <p align="center"><em>Opinionated React Template</em></p>
