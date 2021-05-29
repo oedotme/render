@@ -59,11 +59,11 @@ npm install
 # start development server · http://localhost:3000
 npm run dev
 
-# build for production
+# build client for production
 npm run build
 
-# serve production build · http://localhost:5000
-npm run serve
+# start production preview · http://localhost:5000
+npm run start
 ```
 
 ## Recommendations
