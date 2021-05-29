@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "github": { "autoJobCancelation": true, "silent": true },
-  "routes": [{ "src": "/[^.]+", "dest": "/" }]
+  "rewrites": [{ "source": "/([^.]+)", "destination": "/index" }]
 }
