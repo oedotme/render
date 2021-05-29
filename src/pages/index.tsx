@@ -2,16 +2,12 @@ import { GitHub, Logo } from '@/assets'
 import { useRepo } from '@/hooks'
 
 export default function Home(): JSX.Element {
-  const { loading, error, data } = useRepo('render')
+  const { loading, data } = useRepo('render')
 
   return (
     <>
-      <img className="w-32 h-32" src={Logo} alt={data?.description} />
-      <em className="mt-4 text-gray-700">
-        {loading && 'loading...'}
-        {error && 'Could not fetch data'}
-        {data && data?.description}
-      </em>
+      <img className="w-32 h-32" src={Logo} alt="render" title="render" />
+      <em className="mt-4 text-gray-700">{loading ? 'Loading...' : data ? data.description : '-'}</em>
 
       <ul className="mt-8">
         <li>
