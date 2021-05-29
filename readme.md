@@ -13,7 +13,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 
 ## Stack
 
-- Framework - [React](https://reactjs.org)
+- Frontend - [React](https://reactjs.org)
 - Language - [TypeScript](https://www.typescriptlang.org)
 - Routing - [React Router](https://reactrouter.com/web)
 - Styling - [Tailwind CSS](https://tailwindcss.com)
@@ -21,6 +21,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - Linting - [ESLint](https://eslint.org)
 - Formatting - [Prettier](https://prettier.io)
 - Git hooks - [Husky](https://typicode.github.io/husky)
+- Deployment - [Vercel](http://vercel.com)
 
 ## Features
 
