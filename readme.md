@@ -42,7 +42,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 #### Pre-rendering
 
 - Script `npm run export`
-- Static HTML generated at `dist/static`
+- Static HTML generated at `build/static/dist`
 
 ## Usage
 
