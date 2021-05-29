@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
+// @ts-ignore
 import { render } from './build/server/dist/server.js'
 
 const template = fs.readFileSync(path.resolve('./build/static/dist/index.html'), 'utf-8')

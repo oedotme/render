@@ -21,5 +21,5 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
   },
-  ignorePatterns: ['*rc.js', '*.config.js', '*.mjs'],
+  ignorePatterns: ['*rc.js', '*.config.js', 'prerender.ts'],
 }
