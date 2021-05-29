@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": { "@/*": ["src/*"] },
-    "types": ["vite/client"]
+    "types": ["node", "vite/client"]
   },
-  "include": ["./src"]
+  "include": ["./src", "./prerender.ts"]
 }
