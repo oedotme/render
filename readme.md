@@ -28,12 +28,13 @@ Opinionated React template setup with modern tooling, here some [recommendations
 #### File based routing
 
 - Vite powered
+- Next.js inspired
 - Extensions `.tsx`
 - Index routes `src/pages/index.tsx` to `/`
 - Nested routes `src/pages/routing/index.tsx` to `/routing`
 - Dynamic routes `src/pages/routing/[dynamic].tsx` to `/routing/:dynamic`
 - No matching routes `src/pages/404.tsx`
-- Page Layouts
+- Optional page scope
 
 #### Hooks
 
