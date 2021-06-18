@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 export type Query<T> = { loading: boolean; error: boolean; data?: T }
-type Options = { enabled?: boolean; policy?: 'cache' | 'network' }
+type Options = { enabled?: boolean; cacheTime?: number }
 
-const defaultOptions: Options = { enabled: true, policy: 'network' }
+const defaultOptions: Options = { enabled: true, cacheTime: 0 }
 
 const cache = new Map<string, unknown>()
 
@@ -14,13 +14,13 @@ export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, o
   const [data, setData] = useState<T>()
 
   const id = useMemo(() => (typeof key === 'string' ? key : key.join('/')), [key])
-  const { enabled, policy } = { ...defaultOptions, ...options }
+  const { enabled, cacheTime } = { ...defaultOptions, ...options }
 
   ref.current = fetcher
 
   useEffect(() => {
     if (enabled) {
-      if (policy === 'cache' && cache.has(id)) {
+      if (cacheTime === Infinity && cache.has(id)) {
         setData(cache.get(id) as T)
       } else {
         setStatus('loading')
@@ -30,7 +30,7 @@ export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, o
           .catch(() => setStatus('error'))
       }
     }
-  }, [id, enabled, policy])
+  }, [id, enabled, cacheTime])
 
   return { loading: status === 'loading', error: status === 'error', data }
 }
