@@ -10,7 +10,7 @@ const paths = { '/404': '*' }
 const routes = Object.keys(files)
   .reverse()
   .map((file) => {
-    const path = file.replace(/\.\.\/pages|index|\]|\.tsx$/g, '').replace(/\[/g, ':')
+    const path = file.replace(/\.\.\/pages|index|\.tsx$/g, '').replace(/\[(.+)\]/, ':$1')
 
     return {
       path: path in paths ? paths[path as keyof typeof paths] : path,
