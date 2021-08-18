@@ -20,8 +20,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "npm-run-all compile client",
-    "export": "npm-run-all static server compile prerender",
+    "build": "npm-run-all check client",
+    "export": "npm-run-all static server check prerender",
     "start": "vite preview build/client",
     "client": "vite build --outDir build/client/dist",
     "static": "vite build --outDir build/static/dist",
