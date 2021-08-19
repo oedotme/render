@@ -13,15 +13,15 @@ Opinionated React template setup with modern tooling, here some [recommendations
 
 ## Stack
 
-- Frontend - [React](https://reactjs.org)
-- Language - [TypeScript](https://www.typescriptlang.org)
-- Routing - [React Router](https://reactrouter.com/web)
-- Styling - [Tailwind CSS](https://tailwindcss.com)
-- Build tool - [Vite](https://vitejs.dev)
-- Linting - [ESLint](https://eslint.org)
-- Formatting - [Prettier](https://prettier.io)
-- Git hooks - [Husky](https://typicode.github.io/husky)
-- Deployment - [Vercel](http://vercel.com)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [React Router](https://reactrouter.com/web)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Vite](https://vitejs.dev)
+- [ESLint](https://eslint.org)
+- [Prettier](https://prettier.io)
+- [Husky](https://typicode.github.io/husky)
+- [Vercel](http://vercel.com)
 
 ## Features
 
