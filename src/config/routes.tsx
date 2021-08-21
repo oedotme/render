@@ -3,32 +3,43 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Guard } from '@/components'
 
-const files = import.meta.globEager(`../pages/**/*.tsx`)
+const PRESERVED = import.meta.globEager('../pages/**/(404|_app).{jsx,tsx}')
+const ROUTES = import.meta.globEager('../pages/**/[a-z[]*.{jsx,tsx}')
 
-const paths = { '/404': '*' }
+const preserved: Record<string, () => JSX.Element> = Object.keys(PRESERVED).reduce((preserved, file) => {
+  const path = file.replace(/..\/pages|\.(jsx|tsx)$/g, '')
+  return { ...preserved, [path]: PRESERVED[file].default as () => JSX.Element }
+}, {})
 
-const routes = Object.keys(files)
-  .reverse()
-  .map((file) => {
-    const path = file.replace(/\.\.\/pages|index|\.tsx$/g, '').replace(/\[(.+)\]/, ':$1')
+const routes = Object.keys(ROUTES).map((file) => {
+  const path = file
+    .replace(/..\/pages|index|\.(jsx|tsx)$/g, '')
+    .replace(/\[\.{3}.+\]/, '*')
+    .replace(/\[(.+)\]/, ':$1')
 
-    return {
-      path: path in paths ? paths[path as keyof typeof paths] : path,
-      component: files[file].default as () => JSX.Element,
-      scope: files[file].meta?.scope as 'private' | 'public',
-    }
-  })
+  return {
+    path,
+    component: ROUTES[file].default as () => JSX.Element,
+    scope: ROUTES[file]?.meta?.scope as 'private' | 'public',
+  }
+})
 
 export const Routes = (): JSX.Element => {
+  const App = '/_app' in preserved ? preserved['/_app'] : Fragment
+  const NotFound = '/404' in preserved ? preserved['/404'] : Fragment
+
   return (
-    <Switch>
-      {routes.map(({ path, component: Component = Fragment, scope }) => (
-        <Route key={path} path={path} exact={true}>
-          <Guard scope={scope}>
-            <Component />
-          </Guard>
-        </Route>
-      ))}
-    </Switch>
+    <App>
+      <Switch>
+        {routes.map(({ path, component: Component = Fragment, scope }) => (
+          <Route key={path} path={path} exact={true}>
+            <Guard scope={scope}>
+              <Component />
+            </Guard>
+          </Route>
+        ))}
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </App>
   )
 }
