@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Guard } from '@/components'
 
-const PRESERVED = import.meta.globEager('../pages/**/(404|_app).{jsx,tsx}')
+const PRESERVED = import.meta.globEager('../pages/(404|_app).{jsx,tsx}')
 const ROUTES = import.meta.globEager('../pages/**/[a-z[]*.{jsx,tsx}')
 
 const preserved: Record<string, () => JSX.Element> = Object.keys(PRESERVED).reduce((preserved, file) => {
