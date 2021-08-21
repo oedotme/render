@@ -13,7 +13,7 @@ const ls = (entry: string): string[] => {
 
 const files = ls('./src/pages')
 
-const routes = files.map((file: string) => file.replace(/^src\/pages|index|\.tsx$/g, ''))
+const routes = files.map((file: string) => file.replace(/^src\/pages|index|\.(jsx|tsx)$/g, ''))
 
 const colors = { cyan: '\x1b[36m', gray: '\x1b[37m', green: '\x1b[32m', magenta: '\x1b[35m', reset: '\x1b[0m' }
 const padding = Math.max(...routes.map((route: string) => route.length)) * 2
@@ -29,7 +29,7 @@ for (const url of routes) {
 
   const dist = 'build/static/dist'
   const file = `./${dist}${url.replace(/\/$/, '/index')}.html`
-  const dir = file.replace(/\/\[?[\w|\d]+\]?.html$/, '')
+  const dir = file.replace(/\/\[?[\w|\d|\.{3}]+\]?.html$/, '')
 
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   fs.writeFileSync(path.resolve(file), html)
