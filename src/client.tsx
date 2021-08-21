@@ -1,12 +1,12 @@
 import { hydrate, render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import { App } from '@/app'
+import { Routes } from '@/config'
 
 function Client(): JSX.Element {
   return (
     <BrowserRouter>
-      <App />
+      <Routes />
     </BrowserRouter>
   )
 }
