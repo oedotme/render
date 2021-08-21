@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function RoutingDynamic(): JSX.Element {
+export default function NotFound(): JSX.Element {
   return (
     <>
       <h1 className="font-mono text-2xl">/404</h1>
