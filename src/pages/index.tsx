@@ -1,4 +1,4 @@
-import { useRepo } from '@/hooks'
+import { useRepo } from '@/api'
 
 export default function Home(): JSX.Element {
   const { loading, data } = useRepo('render')
