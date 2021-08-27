@@ -3,17 +3,17 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Guard } from '@/components'
 
-const PRESERVED = import.meta.globEager('../pages/(404|_app).{jsx,tsx}')
-const ROUTES = import.meta.globEager('../pages/**/[a-z[]*.{jsx,tsx}')
+const PRESERVED = import.meta.globEager('../pages/(404|_app).tsx')
+const ROUTES = import.meta.globEager('../pages/**/[a-z[]*.tsx')
 
 const preserved: Record<string, () => JSX.Element> = Object.keys(PRESERVED).reduce((preserved, file) => {
-  const path = file.replace(/..\/pages|\.(jsx|tsx)$/g, '')
+  const path = file.replace(/..\/pages|\.tsx$/g, '')
   return { ...preserved, [path]: PRESERVED[file].default as () => JSX.Element }
 }, {})
 
 const routes = Object.keys(ROUTES).map((file) => {
   const path = file
-    .replace(/..\/pages|index|\.(jsx|tsx)$/g, '')
+    .replace(/..\/pages|index|\.tsx$/g, '')
     .replace(/\[\.{3}.+\]/, '*')
     .replace(/\[(.+)\]/, ':$1')
 
