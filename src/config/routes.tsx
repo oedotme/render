@@ -6,9 +6,9 @@ import { Guard } from '@/components'
 const PRESERVED = import.meta.globEager('/src/pages/(404|_app).tsx')
 const ROUTES = import.meta.globEager('/src/pages/**/[a-z[]*.tsx')
 
-const preserved: Record<string, () => JSX.Element> = Object.keys(PRESERVED).reduce((preserved, file) => {
-  const path = file.replace(/\/src\/pages|\.tsx$/g, '')
-  return { ...preserved, [path]: PRESERVED[file].default as () => JSX.Element }
+const preserved: Partial<Record<'_app' | '404', Component>> = Object.keys(PRESERVED).reduce((preserved, file) => {
+  const key = file.replace(/\/src\/pages\/|\.tsx$/g, '')
+  return { ...preserved, [key]: PRESERVED[file].default as Component }
 }, {})
 
 const routes = Object.keys(ROUTES).map((file) => {
@@ -19,14 +19,14 @@ const routes = Object.keys(ROUTES).map((file) => {
 
   return {
     path,
-    component: ROUTES[file].default as () => JSX.Element,
+    component: ROUTES[file].default as Component,
     scope: ROUTES[file]?.meta?.scope as 'private' | 'public',
   }
 })
 
 export const Routes = (): JSX.Element => {
-  const App = '/_app' in preserved ? preserved['/_app'] : Fragment
-  const NotFound = '/404' in preserved ? preserved['/404'] : Fragment
+  const App = preserved?.['_app'] || Fragment
+  const NotFound = preserved?.['404'] || Fragment
 
   return (
     <App>
