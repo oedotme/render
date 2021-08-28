@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Guard } from '@/components'
 
-const PRESERVED = import.meta.globEager('/src/pages/(404|_app).tsx')
+const PRESERVED = import.meta.globEager('/src/pages/(_app|404).tsx')
 const ROUTES = import.meta.globEager('/src/pages/**/[a-z[]*.tsx')
 
 const preserved: Partial<Record<'_app' | '404', Component>> = Object.keys(PRESERVED).reduce((preserved, file) => {
