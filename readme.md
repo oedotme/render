@@ -30,10 +30,12 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - Vite powered
 - Next.js inspired
 - Extensions `.tsx`
+- Custom app component at `src/pages/_app.tsx`
 - Index routes `src/pages/index.tsx` to `/`
-- Nested routes `src/pages/routing/index.tsx` to `/routing`
-- Dynamic routes `src/pages/routing/[dynamic].tsx` to `/routing/:dynamic`
-- No matching routes `src/pages/404.tsx`
+- Nested routes `src/pages/nested/within.tsx` to `/nested/within`
+- Dynamic routes `src/pages/dynamic/[timestamp].tsx` to `/dynamic/:timestamp`
+- Catch all routes `src/pages/catch/[...all].tsx` to `/catch/*`
+- None matching routes `src/pages/404.tsx`
 - Optional page scope
 
 #### Hooks
