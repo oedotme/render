@@ -11,16 +11,16 @@ const preserved: Partial<Record<'_app' | '404', Component>> = Object.keys(PRESER
   return { ...preserved, [key]: PRESERVED[file].default as Component }
 }, {})
 
-const routes = Object.keys(ROUTES).map((file) => {
-  const path = file
+const routes = Object.keys(ROUTES).map((route) => {
+  const path = route
     .replace(/\/src\/pages|index|\.tsx$/g, '')
     .replace(/\[\.{3}.+\]/, '*')
     .replace(/\[(.+)\]/, ':$1')
 
   return {
     path,
-    component: ROUTES[file].default as Component,
-    scope: ROUTES[file]?.meta?.scope as 'private' | 'public',
+    component: ROUTES[route].default as Component,
+    scope: ROUTES[route]?.meta?.scope as 'private' | 'public',
   }
 })
 
