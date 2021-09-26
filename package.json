@@ -23,7 +23,7 @@
     "build": "npm-run-all check client",
     "export": "npm-run-all static server check prerender",
     "preview": "vite preview build/client",
-    "serve": "serve build/client",
+    "serve": "serve build/client/dist",
     "client": "vite build --outDir build/client/dist",
     "static": "vite build --outDir build/static/dist",
     "server": "vite build --outDir build/server/dist --ssr src/server.tsx",
