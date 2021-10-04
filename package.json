@@ -34,8 +34,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0-alpha-9175f4d15-20210928",
+    "react-dom": "^18.0.0-alpha-9175f4d15-20210928",
     "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
