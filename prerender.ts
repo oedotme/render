@@ -35,7 +35,7 @@ for (const url of routes) {
   fs.writeFileSync(path.resolve(file), html)
 
   console.log(
-    `${colors.green}${url.length > 1 ? url.replace(/\/$/, '\t') : `${url}\t`}`.padEnd(padding),
-    `\t${colors.reset}${Math.round((fs.lstatSync(file).size / 1024) * 100) / 100}kb`
+    `${colors.green}${url.length > 1 ? url.replace(/\/$/, '') : `${url}`}`.padEnd(padding),
+    `\t${colors.reset}${Math.round((fs.lstatSync(file).size / 1024) * 100) / 100} KiB`
   )
 }
