@@ -19,7 +19,7 @@ export const routes = Object.keys(ROUTES).map((route) => {
     .replace(/\[\.{3}.+\]/, '*')
     .replace(/\[(.+)\]/, ':$1')
 
-  return { path, component: lazy(ROUTES[route] as LazyComponent) }
+  return { path, component: lazy(ROUTES[route] as LazyComponent), preload: ROUTES[route] }
 })
 
 export const Routes = (): JSX.Element => {
