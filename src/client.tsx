@@ -1,4 +1,4 @@
-import { hydrate, render } from 'react-dom'
+import { createRoot, hydrateRoot } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
 import { Routes } from '@/config'
@@ -12,6 +12,7 @@ function Client(): JSX.Element {
 }
 
 const app = document.querySelector('#app') as Element
+const root = createRoot(app)
 
-if (app.hasChildNodes()) hydrate(<Client />, app)
-else render(<Client />, app)
+if (app.hasChildNodes()) hydrateRoot(app, <Client />)
+else root.render(<Client />)
