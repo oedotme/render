@@ -1,4 +1,6 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+
+import { Link } from '@/components'
 
 export default function DynamicTimestamp(): JSX.Element {
   const { timestamp } = useParams<{ timestamp: string }>()

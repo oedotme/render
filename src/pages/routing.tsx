@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from '@/components'
 
 export default function Routing(): JSX.Element {
   return (
@@ -9,7 +9,7 @@ export default function Routing(): JSX.Element {
         nested route
       </Link>
 
-      <Link className="p-2 hover:underline" to={`/dynamic/${Date.now()}`}>
+      <Link className="p-2 hover:underline" to={`/dynamic/${Date.now()}`} prefetch={false}>
         dynamic route
       </Link>
 

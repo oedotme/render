@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from '@/components'
 
 export default function NestedWithin(): JSX.Element {
   return (
