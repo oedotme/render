@@ -2,8 +2,6 @@ import { useState } from 'react'
 
 import { useAuth } from '@/context'
 
-export const meta = { scope: 'public' }
-
 export default function Login(): JSX.Element {
   const auth = useAuth()
 
