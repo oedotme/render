@@ -1,11 +1,11 @@
 import { renderToString } from 'react-dom/server'
-import { StaticRouter, StaticRouterProps } from 'react-router-dom'
+import { StaticRouter, StaticRouterProps } from 'react-router-dom/server'
 
 import { Routes } from '@/config'
 
-export const render = (location: StaticRouterProps['location'], context: StaticRouterProps['context']): string => {
+export const render = (location: StaticRouterProps['location']): string => {
   return renderToString(
-    <StaticRouter location={location} context={context}>
+    <StaticRouter location={location}>
       <Routes />
     </StaticRouter>
   )
