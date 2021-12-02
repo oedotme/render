@@ -36,7 +36,7 @@
   "dependencies": {
     "react": "^18.0.0-beta-96ca8d915-20211115",
     "react-dom": "^18.0.0-beta-96ca8d915-20211115",
-    "react-router-dom": "^5.3.0"
+    "react-router-dom": "^6.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
@@ -44,7 +44,6 @@
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "@types/react-router-dom": "^5.3.2",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-react": "^1.1.0",

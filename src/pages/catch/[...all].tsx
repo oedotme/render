@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Link } from '@/components'
 
 export default function CatchAll(): JSX.Element {
-  const { 0: all } = useParams<Record<number, string>>()
+  const { '*': all } = useParams()
 
   return (
     <>
