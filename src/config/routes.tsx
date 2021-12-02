@@ -1,5 +1,5 @@
 import { Fragment, lazy, Suspense } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Routes as RouterRoutes, Route } from 'react-router-dom'
 
 import { Guard } from '@/config'
 
@@ -29,17 +29,21 @@ export const Routes = (): JSX.Element => {
   return (
     <App>
       <Suspense fallback={'Loading...'}>
-        <Switch>
+        <RouterRoutes>
           {routes.map(({ path, component: Component = Fragment }) => (
-            <Route key={path} path={path} exact={true}>
-              <Guard path={path}>
-                <Component />
-              </Guard>
-            </Route>
+            <Route
+              key={path}
+              path={path}
+              element={
+                <Guard path={path}>
+                  <Component />
+                </Guard>
+              }
+            />
           ))}
 
-          <Route path="*" component={NotFound} />
-        </Switch>
+          <Route path="*" element={<NotFound />} />
+        </RouterRoutes>
       </Suspense>
     </App>
   )
