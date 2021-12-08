@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": { "@/*": ["src/*"] },
-    "types": ["react/next", "react-dom/next", "node", "vite/client"]
+    "types": ["react", "react-dom", "node", "vite/client"]
   },
   "include": ["./src", "./prerender.ts"]
 }
