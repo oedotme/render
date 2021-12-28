@@ -22,19 +22,19 @@ console.log(`${colors.cyan}prerender v0.1.0 ${colors.green}prerendering...${colo
 console.log(`${colors.green}✓${colors.reset} ${routes.length} pages prerendered.`)
 
 for (const url of routes) {
-  const app = render(url)
+  render(url).then((app) => {
+    const html = template.replace('<div id="app"></div>', `<div id="app">${app}</div>`)
 
-  const html = template.replace('<div id="app"></div>', `<div id="app">${app}</div>`)
+    const dist = 'build/static/dist'
+    const file = `./${dist}${url.replace(/\/$/, '/index')}.html`
+    const dir = file.replace(/\/\[?[\w|\d|\.{3}]+\]?.html$/, '')
 
-  const dist = 'build/static/dist'
-  const file = `./${dist}${url.replace(/\/$/, '/index')}.html`
-  const dir = file.replace(/\/\[?[\w|\d|\.{3}]+\]?.html$/, '')
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+    fs.writeFileSync(path.resolve(file), html)
 
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-  fs.writeFileSync(path.resolve(file), html)
-
-  console.log(
-    `${colors.green}${url.length > 1 ? url.replace(/\/$/, '') : `${url}`}`.padEnd(padding),
-    `\t${colors.reset}${Math.round((fs.lstatSync(file).size / 1024) * 100) / 100} KiB`
-  )
+    console.log(
+      `${colors.green}${url.length > 1 ? url.replace(/\/$/, '') : `${url}`}`.padEnd(padding),
+      `\t${colors.reset}${Math.round((fs.lstatSync(file).size / 1024) * 100) / 100} KiB`
+    )
+  })
 }

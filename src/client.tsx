@@ -1,13 +1,13 @@
-import { BrowserRouter } from 'react-router-dom'
+import { StrictMode } from 'react'
 import { render, hydrate } from 'react-dom'
 
 import { Routes } from '@/config'
 
-function Client(): JSX.Element {
+function Client() {
   return (
-    <BrowserRouter>
+    <StrictMode>
       <Routes />
-    </BrowserRouter>
+    </StrictMode>
   )
 }
 
