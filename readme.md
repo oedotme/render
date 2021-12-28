@@ -38,6 +38,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - None matching routes `src/pages/404.tsx`
 - Optional page scope
 
+<!--
 #### Hooks
 
 - Authentication [`useAuth`](./src/context/auth.tsx)
@@ -47,6 +48,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 
 - Script `npm run export`
 - Static HTML generated at `build/static/dist`
+-->
 
 ## Usage
 

@@ -2,7 +2,7 @@ import { Link } from '@/components'
 
 import { useAuth } from '@/context'
 
-export const Header = (): JSX.Element => {
+export const Header = () => {
   const auth = useAuth()
 
   return (

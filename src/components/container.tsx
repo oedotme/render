@@ -4,7 +4,7 @@ type Props = {
   children: JSX.Element
 }
 
-export const Container = ({ children }: Props): JSX.Element => {
+export const Container = ({ children }: Props) => {
   return (
     <div className="flex flex-col p-6 min-h-screen">
       <Header />

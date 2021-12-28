@@ -13,7 +13,7 @@ type AuthContext = {
 
 const AuthContext = createContext<AuthContext | null>(null)
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }): JSX.Element | null => {
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [token, setToken] = useState<string>(() => storage.get('token') || '')
   const [user, setUser] = useState<AuthContext['user']>(() => storage.get('user') || undefined)
 

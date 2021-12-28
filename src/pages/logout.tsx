@@ -1,6 +1,6 @@
 import { useAuth } from '@/context'
 
-export default function Logout(): JSX.Element {
+export default function Logout() {
   const auth = useAuth()
 
   const logout = () => auth.logout()

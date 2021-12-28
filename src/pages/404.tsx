@@ -1,6 +1,6 @@
 import { Link } from '@/components'
 
-export default function NotFound(): JSX.Element {
+export default function NotFound() {
   return (
     <>
       <h1 className="font-mono text-2xl">/404</h1>

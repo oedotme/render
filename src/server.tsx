@@ -1,12 +1,18 @@
+import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
-import { StaticRouter, StaticRouterProps } from 'react-router-dom/server'
+import { createMemoryHistory, ReactLocation, RouterInstance } from 'react-location'
 
-import { Routes } from '@/config'
+import { Routes, routes } from '@/config'
 
-export const render = (location: StaticRouterProps['location']): string => {
+export const render = async (url: string): Promise<string> => {
+  const history = createMemoryHistory({ initialEntries: [url] })
+  const location = new ReactLocation({ history })
+  const router = new RouterInstance({ location, routes })
+  await router.updateLocation(location.current).promise
+
   return renderToString(
-    <StaticRouter location={location}>
+    <StrictMode>
       <Routes />
-    </StaticRouter>
+    </StrictMode>
   )
 }

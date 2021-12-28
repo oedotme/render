@@ -1,6 +1,6 @@
 import { Link } from '@/components'
 
-export default function NestedWithin(): JSX.Element {
+export default function NestedWithin() {
   return (
     <>
       <h1 className="font-mono text-2xl">/nested/within</h1>

@@ -1,18 +1,17 @@
-import { createRoot, hydrateRoot } from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { StrictMode } from 'react'
+import { render, hydrate } from 'react-dom'
 
 import { Routes } from '@/config'
 
-function Client(): JSX.Element {
+function Client() {
   return (
-    <BrowserRouter>
+    <StrictMode>
       <Routes />
-    </BrowserRouter>
+    </StrictMode>
   )
 }
 
 const app = document.querySelector('#app') as Element
-const root = createRoot(app)
 
-if (app.hasChildNodes()) hydrateRoot(app, <Client />)
-else root.render(<Client />)
+if (app.hasChildNodes()) hydrate(<Client />, app)
+else render(<Client />, app)
