@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { useAuth } from '@/context'
 
-export default function Login(): JSX.Element {
+export default function Login() {
   const auth = useAuth()
 
   const [email, setEmail] = useState('')

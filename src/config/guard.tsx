@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom'
+import { Navigate } from 'react-location'
 
 import { useAuth } from '@/context'
 
@@ -10,7 +10,7 @@ type Props = {
   children: JSX.Element
 }
 
-export const Guard = ({ path, children }: Props): JSX.Element => {
+export const Guard = ({ path, children }: Props) => {
   const auth = useAuth()
 
   if (PRIVATE.includes(path) && !auth.token) return <Navigate to="/login" replace />
