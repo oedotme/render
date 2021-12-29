@@ -22,7 +22,7 @@ console.log(`${colors.cyan}prerender v0.1.0 ${colors.green}prerendering...${colo
 console.log(`${colors.green}✓${colors.reset} ${routes.length} pages prerendered.`)
 
 for (const url of routes) {
-  render(url).then((app) => {
+  render(url).then((app: string) => {
     const html = template.replace('<div id="app"></div>', `<div id="app">${app}</div>`)
 
     const dist = 'build/static/dist'
