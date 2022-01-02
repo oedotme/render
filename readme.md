@@ -58,16 +58,16 @@ By [generating](https://github.com/oedotme/render/generate) from this template t
 
 ```shell
 # install dependencies
-npm install
+pnpm install
 
 # start development server · http://localhost:3000
-npm run dev
+pnpm dev
 
 # build client for production
-npm run build
+pnpm build
 
 # start production preview · http://localhost:5000
-npm run start
+pnpm start
 ```
 
 ## Recommendations
