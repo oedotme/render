@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import '@/styles/layers.css'
 
 import { Container } from '@/components'
 import { AuthProvider } from '@/context'
