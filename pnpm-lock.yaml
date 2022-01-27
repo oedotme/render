@@ -19,7 +19,7 @@ specifiers:
   eslint-plugin-react: ^7.28.0
   eslint-plugin-react-hooks: ^4.3.0
   husky: ^7.0.4
-  lint-staged: ^12.3.1
+  lint-staged: ^12.3.2
   npm-run-all: ^4.1.5
   postcss: ^8.4.5
   prettier: ^2.5.1
@@ -28,7 +28,7 @@ specifiers:
   react-dom: ^17.0.2
   react-location: ^3.3.3
   serve: ^13.0.2
-  tailwindcss: ^3.0.16
+  tailwindcss: ^3.0.17
   typescript: ^4.5.5
   vite: ^2.7.13
 
@@ -56,13 +56,13 @@ devDependencies:
   eslint-plugin-react: 7.28.0_eslint@8.7.0
   eslint-plugin-react-hooks: 4.3.0_eslint@8.7.0
   husky: 7.0.4
-  lint-staged: 12.3.1
+  lint-staged: 12.3.2
   npm-run-all: 4.1.5
   postcss: 8.4.5
   prettier: 2.5.1
   prettier-plugin-tailwindcss: 0.1.4_prettier@2.5.1
   serve: 13.0.2
-  tailwindcss: 3.0.16_ef48b3b8837f8a23677bffe8f9cd866d
+  tailwindcss: 3.0.17_ef48b3b8837f8a23677bffe8f9cd866d
   typescript: 4.5.5
   vite: 2.7.13
 
@@ -2727,8 +2727,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/12.3.1:
-    resolution: {integrity: sha512-Ocht/eT+4/siWOZDJpNUKcKX2UeWW/pDbohJ4gRsrafAjBi79JK8kiNVk2ciIVNKdw0Q4ABptl2nr6uQAlRImw==}
+  /lint-staged/12.3.2:
+    resolution: {integrity: sha512-gtw4Cbj01SuVSfAOXC6ivd/7VKHTj51yj5xV8TgktFmYNMsZzXuSd5/brqJEA93v63wL7R6iDlunMANOechC0A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -3917,8 +3917,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss/3.0.16_ef48b3b8837f8a23677bffe8f9cd866d:
-    resolution: {integrity: sha512-1L8E5Wr+o1c4kxxObNz2owJe94a7BLEMV+2Lz6wzprJdcs3ENSRR9t4OZf2OqtRNS/q/zFPuOKoLtQoy3Lrhhw==}
+  /tailwindcss/3.0.17_ef48b3b8837f8a23677bffe8f9cd866d:
+    resolution: {integrity: sha512-OiHUsmOKQQEg/ocXaLIjk/kOz8EK2jF6iPuc1bQ4NsmhYl7sk70UDsGV02AJvBAAiJhinPCkDR8egT9qY+ulCw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
