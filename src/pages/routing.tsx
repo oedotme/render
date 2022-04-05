@@ -15,7 +15,7 @@ export default function Routing() {
     <>
       <h1 className="font-mono text-2xl">{data.name}</h1>
 
-      <Link className="p-2 mt-4 hover:underline" to="/nested/within">
+      <Link className="mt-4 p-2 hover:underline" to="/nested/within">
         nested route
       </Link>
 
@@ -25,6 +25,10 @@ export default function Routing() {
 
       <Link className="p-2 hover:underline" to={`/catch/${Date.now()}/then/${Date.now()}`}>
         catch all routes
+      </Link>
+
+      <Link className="p-2 hover:underline" to="/nested">
+        nested layouts
       </Link>
     </>
   )
