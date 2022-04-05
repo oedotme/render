@@ -15,10 +15,6 @@ export default function Routing() {
     <>
       <h1 className="font-mono text-2xl">{data.name}</h1>
 
-      <Link className="mt-4 p-2 hover:underline" to="/nested/within">
-        nested route
-      </Link>
-
       <Link className="p-2 hover:underline" to={`/dynamic/${Date.now()}`}>
         dynamic route
       </Link>
