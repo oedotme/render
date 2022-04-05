@@ -31,12 +31,12 @@ const regularRoutes = Object.keys(ROUTES).reduce<Route[]>((routes, key) => {
     const insert = /^\w|\//.test(path) ? 'unshift' : 'push'
 
     if (root) {
-      const ignored = path.startsWith(':') || path === '*'
-      if (ignored) return parent
+      const dynamic = path.startsWith(':') || path === '*'
+      if (dynamic) return parent
 
       const last = segments.length === 1
       if (last) {
-        routes[insert]({ path, ...route })
+        routes.push({ path, ...route })
         return parent
       }
     }
