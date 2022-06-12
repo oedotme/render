@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
-import { render, hydrate } from 'react-dom'
-
 import { Routes } from '@/config'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 
 function Client() {
   return (
@@ -11,7 +10,8 @@ function Client() {
   )
 }
 
-const app = document.querySelector('#app') as Element
+const app = document.getElementById('app') as Element
+const root = createRoot(app)
 
-if (app.hasChildNodes()) hydrate(<Client />, app)
-else render(<Client />, app)
+if (app.hasChildNodes()) hydrateRoot(app, <Client />)
+else root.render(<Client />)
