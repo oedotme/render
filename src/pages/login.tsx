@@ -14,16 +14,16 @@ export default function Login() {
     <>
       <h1 className="font-mono text-2xl">/auth</h1>
 
-      <div className="flex flex-col m-6 w-56">
+      <div className="m-6 flex w-56 flex-col">
         <input
-          className="p-3 text-center border rounded"
+          className="rounded border p-3 text-center"
           type="email"
           placeholder="Email"
           value={email}
           onChange={handleChange}
         />
         <button
-          className="bg-[#1c2954] mt-3 px-4 py-3 disabled:text-gray-600 text-white disabled:bg-gray-200 border border-black disabled:border-gray-200 rounded disabled:cursor-not-allowed"
+          className="mt-3 rounded border border-black bg-[#1c2954] px-4 py-3 text-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-600"
           onClick={login}
           disabled={!email}
         >

@@ -9,9 +9,9 @@ export default function Logout() {
     <>
       <h1 className="font-mono text-2xl">/auth</h1>
 
-      <div className="flex flex-col m-6 w-56">
-        <p className="p-3 text-center font-mono border border-white">{auth.user?.email}</p>
-        <button className="bg-[#1c2954] mt-3 p-3 px-4 text-white border border-black rounded" onClick={logout}>
+      <div className="m-6 flex w-56 flex-col">
+        <p className="border border-white p-3 text-center font-mono">{auth.user?.email}</p>
+        <button className="mt-3 rounded border border-black bg-[#1c2954] p-3 px-4 text-white" onClick={logout}>
           Logout
         </button>
       </div>
