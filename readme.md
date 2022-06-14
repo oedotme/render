@@ -11,44 +11,48 @@
 
 Opinionated React template setup with modern tooling, here some [recommendations](#recommendations) if needed
 
-## Stack
+## Technologies and tools
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
-- [React Router](https://reactrouter.com/web)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Vite](https://vitejs.dev)
+- [React Location](https://react-location.tanstack.com)
+- [TailwindCSS](https://tailwindcss.com)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
+- [Vite](https://vitejs.dev)
+- [PNPM](https://pnpm.io)
 - [Husky](https://typicode.github.io/husky)
+- [Commitlint](https://commitlint.js.org)
+- [Lint-staged](https://github.com/okonet/lint-staged)
 - [Vercel](http://vercel.com)
 
 ## Features
 
-#### File based routing
+### File based routing
 
+- Using [`generouted`](https://github.com/oedotme/generouted)
 - Vite powered
-- Next.js inspired
-- Extensions `.tsx`
-- Custom app component at `src/pages/_app.tsx`
+- [Next.js inspired](https://nextjs.org/docs/routing/introduction)
+- Supports `.tsx` extensions
+- Custom app at `src/pages/_app.tsx` _(optional)_
+- Custom 404 page at `src/pages/404.tsx` _(optional)_
+- Navigation between routes using [React Location's `<Link />` component](https://react-location.tanstack.com/docs/api#link)
+
+##### Conventions
+
 - Index routes `src/pages/index.tsx` to `/`
 - Nested routes `src/pages/nested/within.tsx` to `/nested/within`
 - Dynamic routes `src/pages/dynamic/[timestamp].tsx` to `/dynamic/:timestamp`
 - Catch all routes `src/pages/catch/[...all].tsx` to `/catch/*`
 - None matching routes `src/pages/404.tsx`
-- Optional page scope
 
-<!--
-#### Hooks
+### Authentication example
 
-- Authentication [`useAuth`](./src/context/auth.tsx)
-- API queries [`useQuery`](./src/hooks/query.ts)
+- [Authentication context](./src/context/auth.tsx)
 
-#### Pre-rendering
+### Custom hooks
 
-- Script `npm run export`
-- Static HTML generated at `build/static/dist`
--->
+- [`useQuery` hook](./src/hooks/query.ts)
 
 ## Usage
 
