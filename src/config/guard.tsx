@@ -1,20 +1,19 @@
-import { Navigate } from 'react-location'
+import { Navigate, useLocation } from 'react-location'
 
 import { useAuth } from '@/context'
 
 const PRIVATE = ['/logout']
 const PUBLIC = ['/login']
 
-type Props = {
-  path: string
-  children: JSX.Element
-}
-
-export const Guard = ({ path, children }: Props) => {
+export const Guard = ({ children }: { children: JSX.Element }) => {
   const auth = useAuth()
+  const location = useLocation()
 
-  if (PRIVATE.includes(path) && !auth.token) return <Navigate to="/login" replace />
-  if (PUBLIC.includes(path) && auth.token) return <Navigate to="/" replace />
+  const authedOnPublicPath = auth.token && PUBLIC.includes(location.current.pathname)
+  const unAuthedOnPrivatePath = !auth.token && PRIVATE.includes(location.current.pathname)
+
+  if (authedOnPublicPath) return <Navigate to="/" replace />
+  if (unAuthedOnPrivatePath) return <Navigate to="/login" replace />
 
   return <>{children}</>
 }

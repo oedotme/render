@@ -49,6 +49,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 ### Authentication example
 
 - [Authentication context](./src/context/auth.tsx)
+- [Routes guard](./src/config/guard.tsx)
 
 ### Custom hooks
 

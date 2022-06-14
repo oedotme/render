@@ -2,6 +2,7 @@ import '@/styles/layers.css'
 
 import { Container } from '@/components'
 import { AuthProvider } from '@/context'
+import { Guard } from '@/config'
 
 type Props = {
   children: JSX.Element
@@ -10,7 +11,9 @@ type Props = {
 export default function App({ children }: Props) {
   return (
     <AuthProvider>
-      <Container>{children}</Container>
+      <Guard>
+        <Container>{children}</Container>
+      </Guard>
     </AuthProvider>
   )
 }
