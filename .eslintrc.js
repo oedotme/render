@@ -22,7 +22,7 @@ module.exports = {
         groups: [
           ['^\\u0000'],
           ['^(assert|constants|crypto|events|fs|path|querystring|stream|url)(/.*|$)'],
-          ['^(react|solid)', '^@?\\w'],
+          ['^(react|solid|vite)', '^@?\\w'],
           ['^(@)(/.*|$)'],
           ['^\\.'],
         ],
