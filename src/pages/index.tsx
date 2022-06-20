@@ -1,6 +1,6 @@
 import { LoaderFn, MakeGenerics, useMatch } from 'react-location'
 
-import { Repo, getRepo } from '@/api'
+import { getRepo, Repo } from '@/api'
 
 type Route = MakeGenerics<{ LoaderData: Repo }>
 

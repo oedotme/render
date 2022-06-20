@@ -1,5 +1,6 @@
-import { Link } from '@/components'
 import { Outlet } from 'react-location'
+
+import { Link } from '@/components'
 
 export default function Nested() {
   return (

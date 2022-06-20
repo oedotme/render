@@ -1,8 +1,8 @@
 import '@/styles/layers.css'
 
 import { Container } from '@/components'
-import { AuthProvider } from '@/context'
 import { Guard } from '@/config'
+import { AuthProvider } from '@/context'
 
 type Props = {
   children: JSX.Element
