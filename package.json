@@ -34,10 +34,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "generouted": "^1.3.1",
+    "@tanstack/react-location": "^3.7.4",
+    "generouted": "^1.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-location": "^3.3.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
