@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from 'react-location'
+import { Navigate, useLocation } from '@tanstack/react-location'
 
 import { useAuth } from '@/context'
 

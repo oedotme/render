@@ -1,4 +1,4 @@
-import { Outlet } from 'react-location'
+import { Outlet } from '@tanstack/react-location'
 
 import { Link } from '@/components'
 

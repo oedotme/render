@@ -1,4 +1,4 @@
-import { MakeGenerics, useMatch } from 'react-location'
+import { MakeGenerics, useMatch } from '@tanstack/react-location'
 
 import { Link } from '@/components'
 
