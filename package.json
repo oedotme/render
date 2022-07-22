@@ -24,10 +24,10 @@
     "web"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev --port 3000",
     "build": "npm-run-all type-check client",
     "export": "npm-run-all static server type-check prerender",
-    "preview": "vite preview build/client",
+    "preview": "vite preview build/client --port 5000",
     "serve": "serve build/client/dist",
     "client": "vite build --outDir build/client/dist",
     "static": "vite build --outDir build/static/dist",
