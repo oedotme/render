@@ -47,20 +47,20 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@types/node": "^18.7.3",
+    "@types/node": "^18.7.13",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
     "@vitejs/plugin-react": "^2.0.1",
     "autoprefixer": "^10.4.8",
-    "esbuild": "^0.15.3",
+    "esbuild": "^0.15.5",
     "esbuild-register": "^3.3.3",
-    "eslint": "^8.22.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react": "^7.31.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^8.0.1",
@@ -71,7 +71,7 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "serve": "^14.0.1",
     "tailwindcss": "^3.1.8",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.7"
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9"
   }
 }
