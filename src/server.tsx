@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
 import { createMemoryHistory, ReactLocation, RouterInstance } from '@tanstack/react-location'
-import { Routes } from 'generouted'
+import { Routes } from 'generouted/react-location'
 
 export const render = async (url: string): Promise<string> => {
   const history = createMemoryHistory({ initialEntries: [url] })
