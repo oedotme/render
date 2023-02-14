@@ -1,15 +1,13 @@
-import { LoaderFn, MakeGenerics, useMatch } from '@tanstack/react-location'
+import { useLoaderData } from 'react-router-dom'
 
 import { getRepo, Repo } from '@/api'
 
-type Route = MakeGenerics<{ LoaderData: Repo }>
-
-export const loader: LoaderFn<Route> = () => {
+export const Loader = () => {
   return getRepo('render')
 }
 
 export default function Home() {
-  const { data } = useMatch<Route>()
+  const data = useLoaderData() as Repo
 
   return (
     <>

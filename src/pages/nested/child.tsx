@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-location'
+import { Link } from 'react-router-dom'
 
 export default function Child() {
   return (

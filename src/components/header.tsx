@@ -1,5 +1,5 @@
-import { Link } from '@/components'
 import { useAuth } from '@/context'
+import { Link } from '@/routes.gen'
 
 export const Header = () => {
   const auth = useAuth()

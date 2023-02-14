@@ -1,18 +1,18 @@
 import '@/styles/layers.css'
 
+import { Outlet } from 'react-router-dom'
+
 import { Container } from '@/components'
 import { Guard } from '@/config'
 import { AuthProvider } from '@/context'
 
-type Props = {
-  children: JSX.Element
-}
-
-export default function App({ children }: Props) {
+export default function App() {
   return (
     <AuthProvider>
       <Guard>
-        <Container>{children}</Container>
+        <Container>
+          <Outlet />
+        </Container>
       </Guard>
     </AuthProvider>
   )

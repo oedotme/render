@@ -1,21 +1,19 @@
-import { LoaderFn, MakeGenerics, useMatch } from '@tanstack/react-location'
+import { useLoaderData } from 'react-router-dom'
 
-import { Link } from '@/components'
+import { Link } from '@/routes.gen'
 
-type Route = MakeGenerics<{ LoaderData: { name: string } }>
-
-export const loader: LoaderFn<Route> = async () => {
-  return await Promise.resolve({ name: '/routing' })
+export const Loader = () => {
+  return Promise.resolve({ name: '/routing' })
 }
 
 export default function Routing() {
-  const { data } = useMatch<Route>()
+  const data = useLoaderData() as { name: string }
 
   return (
     <>
       <h1 className="font-mono text-2xl">{data.name}</h1>
 
-      <Link className="p-2 hover:underline" to={`/dynamic/${Date.now()}`}>
+      <Link className="p-2 hover:underline" to="/dynamic/:timestamp" params={{ timestamp: String(Date.now()) }}>
         dynamic route
       </Link>
 

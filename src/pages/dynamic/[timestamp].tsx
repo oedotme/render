@@ -1,11 +1,7 @@
-import { MakeGenerics, useMatch } from '@tanstack/react-location'
-
-import { Link } from '@/components'
-
-type Page = MakeGenerics<{ Params: { timestamp: string } }>
+import { Link, useParams } from '@/routes.gen'
 
 export default function DynamicTimestamp() {
-  const { params } = useMatch<Page>()
+  const params = useParams('/dynamic/:timestamp')
 
   return (
     <>

@@ -1,6 +1,6 @@
-import { Outlet } from '@tanstack/react-location'
+import { Outlet } from 'react-router-dom'
 
-import { Link } from '@/components'
+import { Link } from '@/routes.gen'
 
 export default function Nested() {
   return (

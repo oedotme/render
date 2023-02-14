@@ -15,7 +15,8 @@ Opinionated React template setup with modern tooling, here some [recommendations
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
-- [React Location](https://react-location.tanstack.com)
+- [React Router](https://reactrouter.com)
+- [Generouted plugin for type-safe navigation with React Router](https://github.com/oedotme/generouted/tree/main/plugins/react-router)
 - [TailwindCSS](https://tailwindcss.com)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
@@ -30,21 +31,8 @@ Opinionated React template setup with modern tooling, here some [recommendations
 
 ### File based routing
 
-- Using [`generouted`](https://github.com/oedotme/generouted)
-- Vite powered
-- [Next.js inspired](https://nextjs.org/docs/routing/introduction)
-- Supports `.tsx` extensions
-- Custom app at `src/pages/_app.tsx` _(optional)_
-- Custom 404 page at `src/pages/404.tsx` _(optional)_
-- Navigation between routes using [React Location's `<Link />` component](https://react-location.tanstack.com/docs/api#link)
-
-##### Conventions
-
-- Index routes `src/pages/index.tsx` to `/`
-- Nested routes `src/pages/nested/within.tsx` to `/nested/within`
-- Dynamic routes `src/pages/dynamic/[timestamp].tsx` to `/dynamic/:timestamp`
-- Catch all routes `src/pages/catch/[...all].tsx` to `/catch/*`
-- None matching routes `src/pages/404.tsx`
+- Using [`generouted` plugin for type-safe navigation](https://github.com/oedotme/generouted/tree/main/plugins/react-router)
+- Check `generouted` [features](https://github.com/oedotme/generouted#features) and [conventions](https://github.com/oedotme/generouted#conventions) for more details
 
 ### Authentication example
 
@@ -79,39 +67,53 @@ pnpm start
 
 #### Frameworks
 
+- [Astro](https://astro.build)
 - [Next.js](https://nextjs.org)
+- [Remix](https://remix.run)
 - [Blitz](https://blitzjs.com)
 - [Redwood](https://redwoodjs.com)
-- [Remix](https://remix.run)
+
+#### Non-React Frameworks
+
+- [Solid](https://www.solidjs.com)
+- [SolidStart](https://start.solidjs.com)
+- [Preact](https://preactjs.com)
 
 #### Languages
 
 - [ReScript](https://rescript-lang.org)
 
+#### Routing
+
+- [TanStack Router](https://tanstack.com/router)
+
 #### Components
 
+- [Radix UI](https://www.radix-ui.com)
 - [Headless UI](https://headlessui.dev)
 - [Chakra UI](https://chakra-ui.com)
 
 #### Build tools
 
-- [Snowpack](https://snowpack.dev)
+- [Esbuild](https://esbuild.github.io)
+- [Parcel](https://parceljs.org)
 
 #### Server state
 
-- [React Query](https://react-query.tanstack.com)
+- [TanStack Query](https://tanstack.com/query)
 - [SWR](https://swr.vercel.app)
 
 #### Data fetching
 
+- [Ky](https://github.com/sindresorhus/ky)
 - [Redaxios](https://github.com/developit/redaxios)
 - [Axios](https://github.com/axios/axios)
 
 #### Global state
 
-- [Recoil](https://recoiljs.org)
 - [Zustand](https://github.com/pmndrs/zustand)
-- [Jotai](https://github.com/pmndrs/jotai)
+- [Jotai](https://jotai.org)
+- [Recoil](https://recoiljs.org)
 - [Redux Toolkit](https://redux-toolkit.js.org)
 
 #### Animation
