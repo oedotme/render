@@ -3,21 +3,21 @@
 
 import { Fragment, lazy, Suspense } from 'react'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
-import { components, hooks } from '@generouted/react-router/client'
+import { components, hooks, utils } from '@generouted/react-router/client'
 
 import app from './pages/_app'
 import noMatch from './pages/404'
 
+const Catchall = lazy(() => import('./pages/catch/[...all]'))
+const Dynamictimestamp = lazy(() => import('./pages/dynamic/[timestamp]'))
 const Index = lazy(() => import('./pages/index'))
 const Login = lazy(() => import('./pages/login'))
 const Logout = lazy(() => import('./pages/logout'))
 const Nested = lazy(() => import('./pages/nested'))
-const Routing = lazy(() => import('./pages/routing'))
-const Catchall = lazy(() => import('./pages/catch/[...all]'))
-const Dynamictimestamp = lazy(() => import('./pages/dynamic/[timestamp]'))
 const Nestedchild = lazy(() => import('./pages/nested/child'))
 const Nestedindex = lazy(() => import('./pages/nested/index'))
 const Nestedsibling = lazy(() => import('./pages/nested/sibling'))
+const Routing = lazy(() => import('./pages/routing'))
 const App = app || Outlet
 const NoMatch = noMatch || Fragment
 
@@ -64,9 +64,6 @@ const config = [
   },
 ]
 
-export const routes = [...config, { path: '*', element: <NoMatch /> }]
-const router = createBrowserRouter([{ element: <App />, children: routes }])
-
 type Path =
   | `/`
   | `/catch/${string}`
@@ -80,6 +77,8 @@ type Path =
 
 type Params = { '/dynamic/:timestamp': { timestamp: string } }
 
-export const Routes = () => <RouterProvider router={router} />
+export const routes = [{ element: <App />, children: [...config, { path: '*', element: <NoMatch /> }] }]
+export const Routes = () => <RouterProvider router={createBrowserRouter(routes)} />
 export const { Link, Navigate } = components<Path, Params>()
 export const { useNavigate, useParams } = hooks<Path, Params>()
+export const { rediect } = utils<Path, Params>()
