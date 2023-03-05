@@ -1,5 +1,5 @@
 import { useAuth } from '@/context'
-import { Link } from '@/routes.gen'
+import { Link } from '@/router'
 
 export const Header = () => {
   const auth = useAuth()

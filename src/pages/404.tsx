@@ -1,4 +1,4 @@
-import { Link } from '@/routes.gen'
+import { Link } from '@/router'
 
 export default function NotFound() {
   return (

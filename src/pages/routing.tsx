@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom'
 
-import { Link } from '@/routes.gen'
+import { Link } from '@/router'
 
 export const Loader = () => {
   return Promise.resolve({ name: '/routing' })

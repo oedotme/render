@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 
-import { Link } from '@/routes.gen'
+import { Link } from '@/router'
 
 export default function CatchAll() {
   const { '*': all } = useParams()

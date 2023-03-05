@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
-  '@generouted/react-router': ^1.7.20
+  '@generouted/react-router': ^1.9.0
   '@types/node': ^18.14.6
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
@@ -20,6 +20,7 @@ specifiers:
   eslint-plugin-react: ^7.32.2
   eslint-plugin-react-hooks: ^4.6.0
   eslint-plugin-simple-import-sort: ^10.0.0
+  generouted: ^1.9.0
   husky: ^8.0.3
   lint-staged: ^13.1.2
   npm-run-all: ^4.1.5
@@ -35,7 +36,8 @@ specifiers:
   vite: ^4.1.4
 
 dependencies:
-  '@generouted/react-router': 1.7.20_vite@4.1.4
+  '@generouted/react-router': 1.9.0_vite@4.1.4
+  generouted: 1.9.0_vite@4.1.4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.8.2_biqbaboplfbrettd7655fr4n2y
@@ -877,8 +879,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@generouted/react-router/1.7.20_vite@4.1.4:
-    resolution: {integrity: sha512-QLX2PW0W6Fzb3921A6UETYZ4VHhK9RX40XQLsk19lJEqab2fXGfDuAWo2TnFauew4s5rfrIUzsErLrUjAzETIQ==}
+  /@generouted/react-router/1.9.0_vite@4.1.4:
+    resolution: {integrity: sha512-1qZATCI7iT8D7qfsXtOZX4IkO2VMS4hb4G2shrs0Z+JPZXu0xVrSem8ytXcFrLlG9iMzvrN+mzZQ1lNLGfuiFg==}
     peerDependencies:
       vite: '>=3'
     dependencies:
@@ -2524,6 +2526,14 @@ packages:
   /functions-have-names/1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
+
+  /generouted/1.9.0_vite@4.1.4:
+    resolution: {integrity: sha512-QTTGaQMn6ZjtIdOaLFoJl46ZAp+GyvaFxsGFr9lkOImh/U+gkBktSNQl1+JVMCy8QsiO1T7mkOfYFa5qtu3lDA==}
+    peerDependencies:
+      vite: '>=3'
+    dependencies:
+      vite: 4.1.4_@types+node@18.14.6
+    dev: false
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}

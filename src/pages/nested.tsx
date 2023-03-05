@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 
-import { Link } from '@/routes.gen'
+import { Link } from '@/router'
 
 export default function Nested() {
   return (

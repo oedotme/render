@@ -1,4 +1,4 @@
-import { Link, useParams } from '@/routes.gen'
+import { Link, useParams } from '@/router'
 
 export default function DynamicTimestamp() {
   const params = useParams('/dynamic/:timestamp')

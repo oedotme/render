@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
-
-import { Routes } from './routes.gen'
+import { Routes } from 'generouted/react-router'
 
 function Client() {
   return (
