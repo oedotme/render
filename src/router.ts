@@ -3,7 +3,7 @@
 
 import { components, hooks, utils } from '@generouted/react-router/client'
 
-type Path =
+export type Path =
   | `/`
   | `/catch/${string}`
   | `/dynamic/:timestamp`
@@ -14,11 +14,11 @@ type Path =
   | `/nested/sibling`
   | `/routing`
 
-type Params = {
+export type Params = {
   '/dynamic/:timestamp': { timestamp: string }
 }
 
-type ModalPath = never
+export type ModalPath = never
 
 export const { Link, Navigate } = components<Path, Params>()
 export const { useModals, useNavigate, useParams } = hooks<Path, Params, ModalPath>()
