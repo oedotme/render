@@ -55,7 +55,7 @@
     "@typescript-eslint/parser": "^5.55.0",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
-    "esbuild": "^0.17.11",
+    "esbuild": "^0.17.12",
     "esbuild-register": "^3.4.2",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
@@ -69,10 +69,10 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.4",
+    "prettier-plugin-tailwindcss": "^0.2.5",
     "serve": "^14.2.0",
     "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4"
+    "typescript": "^5.0.2",
+    "vite": "^4.2.0"
   }
 }
