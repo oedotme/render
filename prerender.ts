@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 
 // @ts-ignore
 import { render } from './build/server/dist/server.js'
@@ -34,7 +34,7 @@ for (const url of routes) {
 
     console.log(
       `${colors.green}${url.length > 1 ? url.replace(/\/$/, '') : `${url}`}`.padEnd(padding),
-      `\t${colors.reset}${Math.round((fs.lstatSync(file).size / 1024) * 100) / 100} KiB`
+      `\t${colors.reset}${Math.round((fs.lstatSync(file).size / 1024) * 100) / 100} KiB`,
     )
   })
 }

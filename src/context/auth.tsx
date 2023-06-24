@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         setUser(undefined), storage.remove('user')
       },
     }),
-    [token, user]
+    [token, user],
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
