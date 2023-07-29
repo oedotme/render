@@ -16,7 +16,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [React Router](https://reactrouter.com)
-- [Generouted for file-based routing and type-safe navigation](https://github.com/oedotme/generouted)
+- [Generouted](https://github.com/oedotme/generouted)
 - [TailwindCSS](https://tailwindcss.com)
 - [Playwright](https://playwright.dev)
 - [ESLint](https://eslint.org)
@@ -28,11 +28,11 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - [Lint-staged](https://github.com/okonet/lint-staged)
 - [Vercel](http://vercel.com)
 
-## Features
+## Highlights
 
 ### File based routing
 
-- Using [`generouted` plugin for type-safe navigation](https://github.com/oedotme/generouted/tree/main/plugins/react-router)
+- Using [`generouted` with type-safe navigation](https://github.com/oedotme/generouted)
 - Check `generouted` [features](https://github.com/oedotme/generouted#features) and [conventions](https://github.com/oedotme/generouted#conventions) for more details
 
 ### Authentication example
