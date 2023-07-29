@@ -16,7 +16,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [React Router](https://reactrouter.com)
-- [Generouted plugin for type-safe navigation with React Router](https://github.com/oedotme/generouted/tree/main/plugins/react-router)
+- [Generouted for file-based routing and type-safe navigation](https://github.com/oedotme/generouted)
 - [TailwindCSS](https://tailwindcss.com)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)

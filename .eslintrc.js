@@ -21,5 +21,5 @@ module.exports = {
       { groups: [['^\\u0000'], ['^node:'], ['^(react|vite)', '^@?\\w'], ['^'], ['^\\.']] },
     ],
   },
-  ignorePatterns: ['*rc.js', '*.config.js', 'prerender.ts'],
+  ignorePatterns: ['*rc.js', '*.config.js'],
 }
