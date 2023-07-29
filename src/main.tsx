@@ -2,9 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Routes } from '@generouted/react-router'
 
+import { AuthProvider } from '@/context'
+
 const App = () => (
   <StrictMode>
-    <Routes />
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
   </StrictMode>
 )
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import { Button } from '@/components'
 import { useAuth } from '@/context'
 
 export default function Login() {
@@ -22,13 +23,10 @@ export default function Login() {
           value={email}
           onChange={handleChange}
         />
-        <button
-          className="mt-3 rounded border border-black bg-[#1c2954] px-4 py-3 text-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-600"
-          onClick={login}
-          disabled={!email}
-        >
+
+        <Button className="mt-3" onClick={login} disabled={!email}>
           Login
-        </button>
+        </Button>
       </div>
     </>
   )

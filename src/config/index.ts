@@ -1,1 +1,1 @@
-export * from './guard'
+export * from './redirects'
