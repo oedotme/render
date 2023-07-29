@@ -1,6 +1,8 @@
 dist
-build
 node_modules
+playwright/.cache
+tests/.output
+tests/.report
 
 .env
 .env.local
