@@ -1,12 +1,10 @@
 module.exports = {
-  root: true,
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaFeatures: { jsx: true }, project: true },
+  parserOptions: { ecmaFeatures: { jsx: true } },
   settings: { react: { version: 'detect' } },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -21,5 +19,12 @@ module.exports = {
       { groups: [['^\\u0000'], ['^node:'], ['^(react|vite)', '^@?\\w'], ['^'], ['^\\.']] },
     ],
   },
+  overrides: [
+    {
+      extends: ['plugin:@typescript-eslint/recommended-type-checked'],
+      parserOptions: { ecmaFeatures: { jsx: true }, project: true },
+      files: ['./src/**/*.{ts,tsx}'],
+    },
+  ],
   ignorePatterns: ['*rc.js', '*.config.js'],
 }
