@@ -9,6 +9,7 @@ export default {
         gray: colors.slate,
         green: colors.emerald,
         red: colors.rose,
+        default: '#121e46',
       },
     },
   },
