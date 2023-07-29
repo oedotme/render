@@ -60,7 +60,7 @@ pnpm dev
 pnpm build
 
 # start production preview · http://localhost:5000
-pnpm start
+pnpm preview
 ```
 
 ## Recommendations
