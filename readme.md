@@ -33,12 +33,12 @@ Opinionated React template setup with modern tooling, here some [recommendations
 ### File based routing
 
 - Using [`generouted` with type-safe navigation](https://github.com/oedotme/generouted)
-- Check `generouted` [features](https://github.com/oedotme/generouted#features) and [conventions](https://github.com/oedotme/generouted#conventions) for more details
+- Check [`generouted` features](https://github.com/oedotme/generouted#features) and [conventions](https://github.com/oedotme/generouted#conventions) for more details
 
 ### Authentication example
 
 - [Authentication context](./src/context/auth.tsx)
-- [Routes guard](./src/config/guard.tsx)
+- [Routes guard](./src/config/redirects.tsx)
 
 ### Custom hooks
 
