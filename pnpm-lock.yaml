@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@generouted/react-router':
-    specifier: ^1.15.6
-    version: 1.15.6(react-router-dom@6.15.0)(react@18.2.0)(vite@4.4.9)
+    specifier: ^1.15.7
+    version: 1.15.7(react-router-dom@6.15.0)(react@18.2.0)(vite@4.4.9)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -745,15 +745,15 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@generouted/react-router@1.15.6(react-router-dom@6.15.0)(react@18.2.0)(vite@4.4.9):
-    resolution: {integrity: sha512-lvl//AV52h9K4jZnVwdOqqhQWdi/VVxRt04zWEVL+RLl8bNXBhjOtYSpxO2NR2BVEC0E3wU7qTpwYUteYkhPZg==}
+  /@generouted/react-router@1.15.7(react-router-dom@6.15.0)(react@18.2.0)(vite@4.4.9):
+    resolution: {integrity: sha512-1Syo2pxpPnVHCKtBSUGEefjgpZh5QWhIe3gH6+T73hnYwMKXfp/iXiTrqzFD6bZuuuathx31YIyX9F0rq2QNzQ==}
     peerDependencies:
       react: '>=18'
       react-router-dom: '>=6'
       vite: '>=4'
     dependencies:
       fast-glob: 3.3.1
-      generouted: 1.15.6(vite@4.4.9)
+      generouted: 1.15.7(vite@4.4.9)
       react: 18.2.0
       react-router-dom: 6.15.0(react-dom@18.2.0)(react@18.2.0)
       vite: 4.4.9(@types/node@20.5.4)
@@ -2314,8 +2314,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
-  /generouted@1.15.6(vite@4.4.9):
-    resolution: {integrity: sha512-m8z0O+6gSzFlQshoLUM9EHXi6IaedLAIyRWF2YcpSCM2mNv0/hbEWPiywRQK4MLIjvpD97oY4qzrJeu+c+9VvA==}
+  /generouted@1.15.7(vite@4.4.9):
+    resolution: {integrity: sha512-Rll1LTdWizn9iRUZA0AvW2a570e3k4YAfCy5SEdBeO5mwzEvtLivbLvbxCMOk8/QPrzbB/giY8iGnK5unAeK4w==}
     peerDependencies:
       vite: '>=3'
     dependencies:
