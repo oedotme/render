@@ -17,7 +17,7 @@ export default function Routing() {
         dynamic route
       </Link>
 
-      <Link className="p-2 hover:underline" to={`/catch/${Date.now()}/then/${Date.now()}`}>
+      <Link className="p-2 hover:underline" to={`/catch/*`} params={{ '*': `${Date.now()}/then/${Date.now()}` }}>
         catch all routes
       </Link>
 

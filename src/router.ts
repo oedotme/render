@@ -5,7 +5,7 @@ import { components, hooks, utils } from '@generouted/react-router/client'
 
 export type Path =
   | `/`
-  | `/catch/${string}`
+  | `/catch/*`
   | `/dynamic/:timestamp`
   | `/login`
   | `/logout`
@@ -15,6 +15,7 @@ export type Path =
   | `/routing`
 
 export type Params = {
+  '/catch/*': { '*': string }
   '/dynamic/:timestamp': { timestamp: string }
 }
 
