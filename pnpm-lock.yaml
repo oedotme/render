@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@generouted/react-router':
-    specifier: ^1.19.0
-    version: 1.19.0(react-router-dom@6.22.3)(react@18.2.0)(vite@5.2.8)
+    specifier: ^1.19.2
+    version: 1.19.2(react-router-dom@6.22.3)(react@18.2.0)(vite@5.2.8)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -32,11 +32,11 @@ devDependencies:
     specifier: ^20.12.7
     version: 20.12.7
   '@types/react':
-    specifier: ^18.2.75
-    version: 18.2.75
+    specifier: ^18.2.77
+    version: 18.2.77
   '@types/react-dom':
-    specifier: ^18.2.24
-    version: 18.2.24
+    specifier: ^18.2.25
+    version: 18.2.25
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.6.0
     version: 7.6.0(@typescript-eslint/parser@7.6.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -737,15 +737,15 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@generouted/react-router@1.19.0(react-router-dom@6.22.3)(react@18.2.0)(vite@5.2.8):
-    resolution: {integrity: sha512-ccIiD0QpshQlWP2lbgN/b4puhXI4yWmmycoqu61UIevXK1BYjHy2iJON43gHP7EoZ2GZFwpE+8k6UDS53LTyYg==}
+  /@generouted/react-router@1.19.2(react-router-dom@6.22.3)(react@18.2.0)(vite@5.2.8):
+    resolution: {integrity: sha512-glHSqsrXZ7t524PgmQOD+fuxFVIuFOyAsYkPI+lbuskGm7Us/FknrkuxiuS4b5wPpHapDnOCChqLdumwvRxBng==}
     peerDependencies:
       react: '>=18'
       react-router-dom: '>=6'
       vite: '>=4'
     dependencies:
       fast-glob: 3.3.2
-      generouted: 1.19.0(vite@5.2.8)
+      generouted: 1.19.2(vite@5.2.8)
       react: 18.2.0
       react-router-dom: 6.22.3(react-dom@18.2.0)(react@18.2.0)
       vite: 5.2.8(@types/node@20.12.7)
@@ -1033,14 +1033,14 @@ packages:
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
     dev: true
 
-  /@types/react-dom@18.2.24:
-    resolution: {integrity: sha512-cN6upcKd8zkGy4HU9F1+/s98Hrp6D4MOcippK4PoE8OZRngohHZpbJn1GsaDLz87MqvHNoT13nHvNqM9ocRHZg==}
+  /@types/react-dom@18.2.25:
+    resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
     dependencies:
-      '@types/react': 18.2.75
+      '@types/react': 18.2.77
     dev: true
 
-  /@types/react@18.2.75:
-    resolution: {integrity: sha512-+DNnF7yc5y0bHkBTiLKqXFe+L4B3nvOphiMY3tuA5X10esmjqk7smyBZzbGTy2vsiy/Bnzj8yFIBL8xhRacoOg==}
+  /@types/react@18.2.77:
+    resolution: {integrity: sha512-CUT9KUUF+HytDM7WiXKLF9qUSg4tGImwy4FXTlfEDPEkkNUzJ7rVFolYweJ9fS1ljoIaP7M7Rdjc5eUm/Yu5AA==}
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
@@ -2646,8 +2646,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
-  /generouted@1.19.0(vite@5.2.8):
-    resolution: {integrity: sha512-cPeywSEgsr/WvlBO49WR1JPNq9dAHFjsGJ8vj0laC/rMsd0E5JflswoRnE5G2miv+R6TaEGaIycG7K9VrLIwWQ==}
+  /generouted@1.19.2(vite@5.2.8):
+    resolution: {integrity: sha512-kldS/yjNkjytPlQ1m44Gm98NCV1gWmgKJXM+pdtcIEp+x7V2JJTKs86N7jAMH0omnBe9GrhVj5OqtuN8x+VjZA==}
     peerDependencies:
       vite: '>=3'
     dependencies:
