@@ -17,6 +17,7 @@ export default tslint.config(
   {
     settings: { react: { version: 'detect' } },
     languageOptions: { parserOptions: { project: true, tsconfigRootDir: import.meta.dirname } },
+    linterOptions: { reportUnusedDisableDirectives: 'off' },
     plugins: { 'react-hooks': hooks, 'simple-import-sort': sort },
     rules: {
       ...hooks.configs.recommended.rules,
