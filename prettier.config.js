@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import("prettier").Config} */
+export default {
   arrowParens: 'always',
   printWidth: 120,
   semi: false,
