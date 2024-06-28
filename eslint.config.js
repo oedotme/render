@@ -1,24 +1,23 @@
-/* eslint-disable */
-
 import eslint from '@eslint/js'
 import a11y from 'eslint-plugin-jsx-a11y'
 import jsx from 'eslint-plugin-react/configs/jsx-runtime.js'
 import react from 'eslint-plugin-react/configs/recommended.js'
 import hooks from 'eslint-plugin-react-hooks'
 import sort from 'eslint-plugin-simple-import-sort'
-import tslint from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
-export default tslint.config(
+export default tseslint.config(
   eslint.configs.recommended,
   a11y.flatConfigs.recommended,
   react,
   jsx,
-  ...tslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.recommendedTypeChecked,
   {
     settings: { react: { version: 'detect' } },
     languageOptions: { parserOptions: { project: true, tsconfigRootDir: import.meta.dirname } },
     linterOptions: { reportUnusedDisableDirectives: 'off' },
     plugins: { 'react-hooks': hooks, 'simple-import-sort': sort },
+    // @ts-expect-error pending package update
     rules: {
       ...hooks.configs.recommended.rules,
       'simple-import-sort/exports': 'warn',
@@ -27,5 +26,9 @@ export default tslint.config(
         { groups: [['^\\u0000'], ['^node:'], ['^(react|solid|vite)', '^@?\\w'], ['^'], ['^\\.']] },
       ],
     },
+  },
+  {
+    files: ['!src/**/*.{ts,tsx}'],
+    extends: [tseslint.configs.disableTypeChecked],
   },
 )
