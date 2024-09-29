@@ -1,7 +1,6 @@
 import eslint from '@eslint/js'
 import a11y from 'eslint-plugin-jsx-a11y'
-import jsx from 'eslint-plugin-react/configs/jsx-runtime.js'
-import react from 'eslint-plugin-react/configs/recommended.js'
+import react from 'eslint-plugin-react'
 import hooks from 'eslint-plugin-react-hooks'
 import sort from 'eslint-plugin-simple-import-sort'
 import tseslint from 'typescript-eslint'
@@ -9,8 +8,8 @@ import tseslint from 'typescript-eslint'
 export default tseslint.config(
   eslint.configs.recommended,
   a11y.flatConfigs.recommended,
-  react,
-  jsx,
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
   ...tseslint.configs.recommendedTypeChecked,
   {
     settings: { react: { version: 'detect' } },
