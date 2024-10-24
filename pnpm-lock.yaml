@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@generouted/react-router':
-        specifier: ^1.19.7
-        version: 1.19.7(react-router-dom@6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.10(@types/node@22.7.9))
+        specifier: ^1.19.8
+        version: 1.19.8(react-router-dom@6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.10(@types/node@22.7.9))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -444,8 +444,8 @@ packages:
     resolution: {integrity: sha512-HFZ4Mp26nbWk9d/BpvP0YNL6W4UoZF0VFcTw/aPPA8RpOxeFQgK+ClABGgAUXs9Y/RGX/l1vOmrqz1MQt9MNuw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@generouted/react-router@1.19.7':
-    resolution: {integrity: sha512-ARdRJ9WN4CdUR8ffebZ+kaMx33SxrqQx7WVNUr7L8HQP4fZumGlf2TyyFpCFfRIQ0FU4iQaZkqnLGZT+pMhPHw==}
+  '@generouted/react-router@1.19.8':
+    resolution: {integrity: sha512-j4TL7WkIlfmGjcoEWLnIS6HiCnrLg1r0yo4iWPbDEfZNQD+iOvFm3idavNgRJfioskeMCslMSyC/EiU0YU9sCw==}
     peerDependencies:
       react: '>=18'
       react-router-dom: '>=6'
@@ -1235,8 +1235,8 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  generouted@1.19.7:
-    resolution: {integrity: sha512-DS9d969csszxfufsADNlnH3DZT9BMGy8TekqvYL/wzELkEuZSh9LIQsJukSd4Lj63ex1xwGIj4IzkNoXM/pCaA==}
+  generouted@1.19.8:
+    resolution: {integrity: sha512-Vk+KGweA7LFgTRwRMIPuEJypjKfPzcgR6Nhwirm2pVo/PDuBcro7XcZ5diRd6GQraupZm32/bm+M4ZzCZONvkg==}
     peerDependencies:
       vite: '>=3'
 
@@ -2728,10 +2728,10 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@generouted/react-router@1.19.7(react-router-dom@6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.10(@types/node@22.7.9))':
+  '@generouted/react-router@1.19.8(react-router-dom@6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.10(@types/node@22.7.9))':
     dependencies:
       fast-glob: 3.3.2
-      generouted: 1.19.7(vite@5.4.10(@types/node@22.7.9))
+      generouted: 1.19.8(vite@5.4.10(@types/node@22.7.9))
       react: 18.3.1
       react-router-dom: 6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       vite: 5.4.10(@types/node@22.7.9)
@@ -3681,7 +3681,7 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  generouted@1.19.7(vite@5.4.10(@types/node@22.7.9)):
+  generouted@1.19.8(vite@5.4.10(@types/node@22.7.9)):
     dependencies:
       vite: 5.4.10(@types/node@22.7.9)
 
