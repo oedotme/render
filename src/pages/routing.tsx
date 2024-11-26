@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router'
 
 import { Link } from '@/router'
 
@@ -7,7 +7,7 @@ export const Loader = () => {
 }
 
 export default function Routing() {
-  const data = useLoaderData() as { name: string }
+  const data = useLoaderData<{ name: string }>()
 
   return (
     <>

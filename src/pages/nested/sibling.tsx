@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from '@/router'
 
 export default function Sibling() {
   return (

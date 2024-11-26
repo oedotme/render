@@ -1,9 +1,7 @@
-import { useParams } from 'react-router-dom'
-
-import { Link } from '@/router'
+import { Link, useParams } from '@/router'
 
 export default function CatchAll() {
-  const { '*': all } = useParams()
+  const { '*': all } = useParams('/catch/*')
 
   return (
     <>

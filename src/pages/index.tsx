@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router'
 
 import { getRepo, Repo } from '@/api'
 import { Github, Logo } from '@/icons'
@@ -8,7 +8,7 @@ export const Loader = () => {
 }
 
 export default function Home() {
-  const data = useLoaderData() as Repo
+  const data = useLoaderData<Repo>()
 
   return (
     <>

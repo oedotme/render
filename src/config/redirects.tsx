@@ -1,7 +1,7 @@
-import { Navigate, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router'
 
 import { useAuth } from '@/context'
-import { Path } from '@/router'
+import { Navigate, Path } from '@/router'
 
 const PRIVATE: Path[] = ['/logout']
 const PUBLIC: Path[] = ['/login']

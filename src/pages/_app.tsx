@@ -1,6 +1,6 @@
 import '@/styles/layers.css'
 
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router'
 
 import { Redirects } from '@/config'
 import { useAuth } from '@/context'
