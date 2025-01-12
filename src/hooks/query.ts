@@ -8,7 +8,7 @@ const defaultOptions: Options = { enabled: true, cacheTime: 0 }
 const cache = new Map<string, unknown>()
 
 export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, options?: Options): Query<T> => {
-  const ref = useRef<() => Promise<T>>()
+  const ref = useRef<() => Promise<T>>(undefined)
 
   const [status, setStatus] = useState<'stale' | 'loading' | 'error' | 'done'>('stale')
   const [data, setData] = useState<T>()
