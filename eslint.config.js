@@ -16,7 +16,6 @@ export default tseslint.config(
     languageOptions: { parserOptions: { project: true, tsconfigRootDir: import.meta.dirname } },
     linterOptions: { reportUnusedDisableDirectives: 'off' },
     plugins: { 'react-hooks': hooks, 'simple-import-sort': sort },
-    // @ts-expect-error pending package update
     rules: {
       ...hooks.configs.recommended.rules,
       'simple-import-sort/exports': 'warn',
