@@ -1,4 +1,4 @@
-import '@/styles/layers.css'
+import '@/main.css'
 
 import { Outlet } from 'react-router'
 

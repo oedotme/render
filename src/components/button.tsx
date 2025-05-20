@@ -7,7 +7,7 @@ export const Button = (props: ComponentProps<'button'>) => {
     <button
       {...props}
       className={classNames(
-        'rounded border border-black bg-default px-4 py-3 text-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-600',
+        'rounded-sm border border-black bg-default px-4 py-3 text-white disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-600',
         props.className,
       )}
     >
