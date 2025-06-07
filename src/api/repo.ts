@@ -1,4 +1,4 @@
-import { Query, useQuery } from '@/hooks'
+import { type Query, useQuery } from '@/hooks'
 
 const url = 'https://api.github.com/repos/oedotme'
 const get = <T>(url: string) => fetch(url).then((response) => response.json()) as Promise<T>

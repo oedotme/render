@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import { Routes } from '@generouted/react-router'
+import { createRoot } from 'react-dom/client'
 
 import { AuthProvider } from '@/context'
 
@@ -12,5 +12,5 @@ const App = () => (
   </StrictMode>
 )
 
-const app = document.getElementById('app')!
-createRoot(app).render(<App />)
+const app = document.getElementById('app')
+if (app) createRoot(app).render(<App />)

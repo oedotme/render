@@ -26,7 +26,11 @@ export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, o
         setStatus('loading')
         ref
           .current?.()
-          .then((data) => (setData(data), setStatus('done'), cache.set(id, data)))
+          .then((data) => {
+            setData(data)
+            setStatus('done')
+            cache.set(id, data)
+          })
           .catch(() => setStatus('error'))
       }
     }

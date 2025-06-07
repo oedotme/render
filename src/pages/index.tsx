@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router'
 
-import { getRepo, Repo } from '@/api'
+import { getRepo, type Repo } from '@/api'
 import { Github, Logo } from '@/icons'
 
 export const Loader = () => {

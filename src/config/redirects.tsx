@@ -1,8 +1,8 @@
-import { JSX } from 'react'
+import type { JSX } from 'react'
 import { useLocation } from 'react-router'
 
 import { useAuth } from '@/context'
-import { Navigate, Path } from '@/router'
+import { Navigate, type Path } from '@/router'
 
 const PRIVATE: Path[] = ['/logout']
 const PUBLIC: Path[] = ['/login']
