@@ -41,19 +41,19 @@
     "@generouted/react-router": "^1.20.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.1"
+    "react-router": "^7.6.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.27.0",
+    "@eslint/js": "^9.28.0",
     "@playwright/test": "^1.52.0",
     "@tailwindcss/vite": "^4.1.8",
-    "@types/node": "^22.15.27",
+    "@types/node": "^22.15.30",
     "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.5.0",
-    "eslint": "^9.27.0",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.1",
+    "eslint": "^9.28.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -61,10 +61,10 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.0",
+    "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5"
   }
 }
