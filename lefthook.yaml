@@ -1,0 +1,19 @@
+no_tty: true
+
+pre-commit:
+  parallel: true
+
+  jobs:
+    - name: compile
+      glob: "*.{ts,tsx}"
+      run: bun tsc -p tsconfig.json
+
+    - name: check
+      glob: "*.{css,html,json,md,mdx,js,jsx,ts,tsx}"
+      run: bun biome check --write {staged_files}
+      stage_fixed: true
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: bun commitlint --edit {1}

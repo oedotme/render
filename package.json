@@ -28,14 +28,12 @@
     "dev": "vite dev --port 3000",
     "build": "vite build",
     "preview": "vite build; vite preview --port 5000",
-    "type-check": "tsc --noEmit",
-    "format": "biome format --write src",
-    "lint": "biome check --write src",
+    "compile": "tsc --noEmit",
+    "check": "biome check --write src",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
-    "test:record": "playwright codegen",
-    "prepare": "husky"
+    "test:record": "playwright codegen"
   },
   "dependencies": {
     "@generouted/react-router": "^1.20.0",
@@ -53,8 +51,7 @@
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.0",
+    "lefthook": "^1.11.13",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^4.1.8",

@@ -21,10 +21,9 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - [Playwright](https://playwright.dev)
 - [Biome](https://biomejs.dev)
 - [Vite](https://vitejs.dev)
-- [Husky](https://typicode.github.io/husky)
 - [Bun](https://bun.sh)
+- [Lefthook](https://lefthook.dev)
 - [Commitlint](https://commitlint.js.org)
-- [Lint-staged](https://github.com/okonet/lint-staged)
 - [Vercel](http://vercel.com)
 
 ## Highlights
