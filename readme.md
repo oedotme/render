@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-  <a href="https://rendertemplate.vercel.app" target="_blank" rel="noopener noreferrer">
+  <a href="https://renderapp.netlify.app" target="_blank" rel="noopener noreferrer">
     <img src="/public/logo.svg" alt="Render · Opinionated React Template" width="120"/>
   </a>
 </p>
@@ -26,7 +26,7 @@ Opinionated React template setup with modern tooling, here some [recommendations
 - [Husky](https://typicode.github.io/husky)
 - [Commitlint](https://commitlint.js.org)
 - [Lint-staged](https://github.com/okonet/lint-staged)
-- [Vercel](http://vercel.com)
+- [Netlify](http://netlify.com)
 
 ## Highlights
 
