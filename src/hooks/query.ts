@@ -16,6 +16,7 @@ export const useQuery = <T>(key: string | string[], fetcher: () => Promise<T>, o
   const id = useMemo(() => (typeof key === 'string' ? key : key.join('/')), [key])
   const { enabled, cacheTime } = { ...defaultOptions, ...options }
 
+  // eslint-disable-next-line react-hooks/refs
   ref.current = fetcher
 
   useEffect(() => {
